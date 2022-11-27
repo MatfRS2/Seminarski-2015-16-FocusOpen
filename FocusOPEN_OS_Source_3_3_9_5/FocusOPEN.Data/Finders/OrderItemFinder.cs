@@ -1,0 +1,50 @@
+/**********************************************************************************************************************
+	FocusOPEN Digital Asset Manager (TM) 
+	(c) Daydream Interactive Limited 1995-2011, All Rights Reserved
+
+	The name and trademarks of copyright holders may NOT be used in advertising or publicity pertaining to the software
+	without specific, written prior permission. Title to copyright in this software and any associated documentation
+	will at all times remain with copyright holders.
+
+	Please refer to licences/focusopen.txt or http://www.digitalassetmanager.com for licensing information about this
+	software. 
+**********************************************************************************************************************/
+
+using Daydream.Data;
+
+namespace FocusOPEN.Data
+{
+	public partial class OrderItemFinder
+	{
+		#region Private variables
+
+		private bool m_OrderItemStatusNotPreApproved = false;
+
+		#endregion
+
+		#region Accessors
+
+		public bool OrderItemStatusNotPreApproved
+		{
+			get
+			{
+				return m_OrderItemStatusNotPreApproved;
+			}
+			set
+			{
+				m_OrderItemStatusNotPreApproved = value;
+			}
+		}
+
+		#endregion
+
+		protected void SetCustomSearchCriteria (ref SearchBuilder sb)
+		{
+			if (OrderItemStatusNotPreApproved)
+			{
+				sb.Criteria.Add("OrderItemStatusId <> 1");
+			}
+		}
+	}
+}
+

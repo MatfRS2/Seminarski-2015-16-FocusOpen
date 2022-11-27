@@ -1,0 +1,277 @@
+body
+{
+	background-color: #FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	text-align: center;
+}
+.BodyTxt
+{
+	color: #000000;
+	font-size: 11px;
+}
+.PanelTxt
+{
+	color: #000000;
+	font-size: 11px;
+}
+.NavTxt
+{
+	color: #000000;
+	font-size: 12px;
+	text-decoration: none;
+}
+.LoginTxt
+{
+	color: #000000;
+	font-size: 12px;
+}
+.FooterTxt
+{
+	color: #000000;
+	font-size: 12px;
+}
+.greyedBoldTxt
+{
+	color: #D8D8D8;
+	font-weight: bold;
+}
+
+.FtrMrg
+{
+	color: #D9D9DA;
+	margin-top: 10px;
+}
+.FbkPosTxt
+{
+	color: #006E6C;
+	font-size: 11px;
+	font-weight: bold;
+	vertical-align: middle;
+}
+.FbkNegTxt
+{
+	color: #D10B27;
+	font-size: 11px;
+	font-weight: bold;
+	vertical-align: middle;
+}
+.NegTxt
+{
+	color: #D10B27;
+	font-size: 11px;
+}
+.PosTxt
+{
+	color: #006E6C;
+	font-size: 11px;
+}
+.FbkNullTxt
+{
+	color: #A4A4A4;
+	font-size: 11px;
+	font-weight: bold;
+	vertical-align: middle;
+}
+.NullTxt
+{
+	color: #A4A4A4;
+	font-size: 11px;
+}
+.Bold
+{
+	font-weight: bold;
+}
+.Italics
+{
+	font-style: italic;
+}
+.Left
+{
+	float: left;
+}
+.Right
+{
+	float: right;
+}
+.Top
+{
+	vertical-align: top;
+}
+.Clear
+{
+	clear: both;
+}
+.formInput
+{
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+.button
+{
+	background-color: #F4F3EE;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-top: 1px solid #000000;
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+.buttonLink
+{
+	background-color: #F4F3EE;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-top: 1px solid #000000;
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	text-decoration: none;
+	padding: 2px;
+}
+
+
+.content
+{
+	margin: 10px;
+	width: 750px;
+}
+.TblOutline
+{
+	border-bottom-color: #EAEAEA;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-left-color: #EAEAEA;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-color: #EAEAEA;
+	border-right-style: none;
+	border-right-width: 1px;
+	border-top-color: #EAEAEA;
+	border-top-style: none;
+	border-top-width: 1px;
+}
+.TblCell1
+{
+	background-color: #FFFFFF;
+	border-bottom-color: #EAEAEA;
+	border-bottom-style: none;
+	border-bottom-width: 1px;
+	border-left-color: #EAEAEA;
+	border-left-style: none;
+	border-left-width: 1px;
+	border-right-color: #EAEAEA;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-top-color: #EAEAEA;
+	border-top-style: solid;
+	border-top-width: 1px;
+}
+.TblCell2
+{
+	background-color: #F5F4F0;
+	border-bottom-color: #EAEAEA;
+	border-bottom-style: none;
+	border-bottom-width: 1px;
+	border-left-color: #EAEAEA;
+	border-left-style: none;
+	border-left-width: 1px;
+	border-right-color: #EAEAEA;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-top-color: #EAEAEA;
+	border-top-style: solid;
+	border-top-width: 1px;
+}
+.alignCentre
+{
+	text-align: center;
+}
+.alignLeft
+{
+	text-align: left;
+}
+.alignRight
+{
+	text-align: right;
+}
+.alignTop
+{
+	vertical-align: top;
+}
+.alignCentreTop
+{
+	text-align: center;
+	vertical-align: top;
+}
+
+.borderless
+{
+	border-width: 0px;
+	border-color: #FFFFFF;
+	background-color: #FFFFFF;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-right-style: solid;
+	border-top-style: solid;
+}
+
+.BaseLine
+{
+	vertical-align: baseline;
+}
+.ReqField
+{
+	color: #F58A22;
+	font-size: 14px;
+}
+.MenuHdrTxt
+{
+	color: #FFFFFF;
+	font-size: 12px;
+}
+.MenuTxt
+{
+	color: #FFFFFF;
+	font-size: 11px;
+}
+.HomeHdrTxt
+{
+	color: #FFFFFF;
+	font-size: 12px;
+	text-decoration: none;
+}
+.ChartTxt
+{
+	color: #000000;
+	font-size: 10px;
+}
+.CatHdrTxt
+{
+	color: #000;
+	font-size: 11px;
+}
+.Black
+{
+	color: #000000;
+}
+.Red
+{
+	color: #D10B27;
+}
+.White
+{
+	color: #FFFFFF;
+}
+.Green
+{
+	color: #006E6C;
+}
+.NoDecoration
+{
+	text-decoration: none;
+}

@@ -1,0 +1,151 @@
+.MenuWrapper
+{
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	text-align: left;
+	width: 1000px;
+}
+.MenuPanelOpt
+{
+	margin-bottom: 0;
+	margin-left: 10px;
+	margin-right: 0;
+	margin-top: 5px;
+	width: 100px;
+}
+.MenuPanelThb
+{
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 5px;
+	width: 730px;
+}
+.MenuPanelEnd
+{
+	margin-bottom: 0;
+	margin-left: 10px;
+	margin-right: 0;
+	margin-top: 5px;
+	width: 70px;
+}
+.MenuGridBkg
+{
+	background-image: url(images/core/bkgs/menus/ThbBkg.gif);
+	background-repeat: no-repeat;
+	height: 155px;
+	text-align: center;
+	vertical-align: top;
+	width: 170px;
+}
+.MenuThbMrg
+{
+	margin: 10px 0 2px;
+}
+.MenuIcons
+{
+	margin: 0;
+	padding: 0;
+}
+.LbxMenuBkgUp
+{
+	background-color: #413189;
+	height: 196px;
+}
+.LbxMenuBkgDown
+{
+	background-color: #413189;
+	height: 30px;
+}
+.LbxBaseLine
+{
+	vertical-align: 50%;
+}
+.LbxEndR
+{
+	background-image: url(images/core/bkgs/menus/LbxEndR.gif);
+	background-repeat: no-repeat;
+	height: 155px;
+	margin: 0;
+	width: 21px;
+}
+.LbxEndL
+{
+	background-image: url(images/core/bkgs/menus/LbxEndL.gif);
+	background-repeat: no-repeat;
+	height: 155px;
+	margin: 0;
+	width: 18px;
+}
+.CartMenuBkgUp
+{
+	background-color: #413189;
+	height: 196px;
+}
+.CartMenuBkgDown
+{
+	background-color: #413189;
+	height: 30px;
+}
+.CartEndR
+{
+	background-image: url(images/core/bkgs/menus/CrtEndR.gif);
+	background-repeat: no-repeat;
+	height: 155px;
+	margin: 0;
+	width: 21px;
+}
+.CartEndL
+{
+	background-image: url(images/core/bkgs/menus/CrtEndL.gif);
+	background-repeat: no-repeat;
+	height: 155px;
+	margin: 0;
+	width: 18px;
+}
+.ArrowL
+{
+	margin-bottom: 0;
+	margin-left: 5px;
+	margin-right: 0;
+	margin-top: 0;
+}
+.ArrowR
+{
+	margin-bottom: 0;
+	margin-left: 8px;
+	margin-right: 0;
+	margin-top: 0;
+}
+#fixedUp
+{
+	bottom: 0;
+	display: block;
+	height: 196px;
+	left: 0;
+	padding: 0;
+	position: fixed;
+	right: 0;
+	width: 100%;
+}
+#fixedDown
+{
+	bottom: 0;
+	display: block;
+	height: 30px;
+	left: 0;
+	padding: 0;
+	position: fixed;
+	right: 0;
+	width: 100%;
+}
+* html #fixedUp
+{
+	position: absolute;
+}
+* html #fixedDown
+{
+	position: absolute;
+}

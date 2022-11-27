@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<APIErrors>
+  <!-- Generic -->
+  <Error id="-1" description="Request method must be GET for this call" />
+  <Error id="-2" description="Request method must be POST for this call" />
+  <Error id="-3" description="Response format not permitted (must be XML or JSON)" />
+  <Error id="-4" description="Session token is invalid" />
+  <Error id="-5" description="User does not have permissions to issue that Call" />
+  <Error id="-6" description="User does not have permissions to access that asset" />
+  <Error id="-7" description="Call failed for an unknown reason" />
+  
+  <!-- REST API Specific -->
+  <Error id="-10000" description="UserAPIToken not recognised or API access not permitted" />
+  <Error id="-10001" description="User account has been suspended" />
+  <Error id="-10002" description="Account has expired" />
+  <Error id="-10003" description="IP address not permitted" />
+
+</APIErrors>

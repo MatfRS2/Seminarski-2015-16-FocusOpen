@@ -1,0 +1,872 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A62C8747-F3FF-4A38-BB3E-A752A9DA31C4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FocusOPEN.Data</RootNamespace>
+    <AssemblyName>FocusOPEN.Data</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\Log4net\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\Interfaces\IPlugin.cs" />
+    <Compile Include="Base\Interfaces\IPluginContext.cs" />
+    <Compile Include="BrandMetadataSettings.cs" />
+    <Compile Include="Cache\AssetFilePathCache.cs" />
+    <Compile Include="Cache\AssetImageSize.cs" />
+    <Compile Include="Cache\AssetTypeCache.cs" />
+    <Compile Include="Cache\AssetTypeFileExtensionCache.cs" />
+    <Compile Include="Cache\BaseEntityCache.cs" />
+    <Compile Include="Cache\BrandCache.cs" />
+    <Compile Include="Cache\CategoryCache.cs" />
+    <Compile Include="Cache\CompanyCache.cs" />
+    <Compile Include="Cache\CountryCache.cs" />
+    <Compile Include="Cache\HomepageTypeCache.cs" />
+    <Compile Include="Cache\MetadataCache.cs" />
+    <Compile Include="Cache\BrandMetadataSettingCache.cs" />
+    <Compile Include="Base\AbstractDataFactory.cs" />
+    <Compile Include="Base\AbstractDataMapper.cs" />
+    <Compile Include="Base\AbstractEntity.cs" />
+    <Compile Include="Base\AbstractFinder.cs" />
+    <Compile Include="Base\ByteArray.cs" />
+    <Compile Include="Base\DataContext.cs" />
+    <Compile Include="Base\DateRange.cs" />
+    <Compile Include="Base\EntityList.cs" />
+    <Compile Include="Base\AbstractDataMapperException.cs" />
+    <Compile Include="Base\Interfaces\IDataFactory.cs" />
+    <Compile Include="Base\Interfaces\IDataMapper.cs" />
+    <Compile Include="Base\Interfaces\IEntity.cs" />
+    <Compile Include="Base\Interfaces\IEntityList.cs" />
+    <Compile Include="Base\Interfaces\IFinder.cs" />
+    <Compile Include="Base\Interfaces\INullable.cs" />
+    <Compile Include="Base\Interfaces\IReader.cs" />
+    <Compile Include="Base\Interfaces\IRowReader.cs" />
+    <Compile Include="Base\Interfaces\ISortExpression.cs" />
+    <Compile Include="Base\NullObjects\NullByteArray.cs" />
+    <Compile Include="Base\NullObjects\NullDateRange.cs" />
+    <Compile Include="Base\NullObjects\NullPagingInfo.cs" />
+    <Compile Include="Base\PagedDataSet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base\PagingInfo.cs" />
+    <Compile Include="Base\Readers.cs" />
+    <Compile Include="Base\RowReader.cs" />
+    <Compile Include="Base\SearchBuilder.cs" />
+    <Compile Include="Base\SmartDataReader.cs" />
+    <Compile Include="Base\SortExpressionList.cs" />
+    <Compile Include="Base\Sorts\AscendingSort.cs" />
+    <Compile Include="Base\Sorts\DescendingSort.cs" />
+    <Compile Include="Base\SqlDataFactory.cs" />
+    <Compile Include="Base\SqlUtils.cs" />
+    <Compile Include="Entities\Custom\AssetLink.cs" />
+    <Compile Include="Entities\Custom\AssetMetadataTextField.cs" />
+    <Compile Include="Entities\Custom\AssetMetadataTextArea.cs" />
+    <Compile Include="Entities\Custom\AssetTypeFileExtension.cs" />
+    <Compile Include="Entities\Custom\BrandMetadataSelectableSetting.cs" />
+    <Compile Include="Entities\Custom\Company.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Custom\CompanyBrand.cs" />
+    <Compile Include="Entities\Custom\AssetOrderHistory.cs" />
+    <Compile Include="Entities\Custom\HomepageCategory.cs" />
+    <Compile Include="Entities\Custom\IpAddress.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Custom\Asset.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Custom\AssetCategory.cs" />
+    <Compile Include="Entities\Custom\AssetFile.cs" />
+    <Compile Include="Entities\Custom\AssetFilePath.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Custom\AssetImageSize.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Custom\AssetMetadata.cs" />
+    <Compile Include="Entities\Custom\AssetType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Custom\AssetWorkflow.cs" />
+    <Compile Include="Entities\Custom\AssetWorkflowCommenter.cs" />
+    <Compile Include="Entities\Custom\AssetWorkflowUser.cs" />
+    <Compile Include="Entities\Custom\AuditAssetHistory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Custom\AuditAssetSearch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Custom\AuditAssetSearchKeyword.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Custom\AuditAssetSearchResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Custom\AuditUserHistory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Custom\Brand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Custom\Cart.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Custom\Category.cs" />
+    <Compile Include="Entities\Custom\Country.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Custom\Homepage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Custom\HomepageType.cs" />
+    <Compile Include="Entities\Custom\Lightbox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Custom\LightboxAsset.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Custom\LightboxBrand.cs" />
+    <Compile Include="Entities\Custom\LightboxLinked.cs" />
+    <Compile Include="Entities\Custom\LightboxSent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Custom\Metadata.cs" />
+    <Compile Include="Entities\Custom\BrandMetadataSetting.cs" />
+    <Compile Include="Entities\Custom\Order.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Custom\OrderItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Custom\OrderItemComment.cs" />
+    <Compile Include="Entities\Custom\Plugin.cs" />
+    <Compile Include="Entities\Custom\User.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Custom\UserBrand.cs" />
+    <Compile Include="Entities\Custom\UserPasswordHistory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Custom\Workflow.cs" />
+    <Compile Include="Entities\Custom\WorkflowUser.cs" />
+    <Compile Include="Entities\Nulls\NullAssetMetadataTextField.cs" />
+    <Compile Include="Entities\Nulls\NullAssetMetadataTextArea.cs" />
+    <Compile Include="Entities\Nulls\NullBrandMetadataSelectableSetting.cs" />
+    <Compile Include="Entities\Nulls\NullAssetOrderHistory.cs" />
+    <Compile Include="Entities\Nulls\NullAssetLink.cs" />
+    <Compile Include="Entities\Nulls\NullAssetTypeFileExtension.cs" />
+    <Compile Include="Entities\Nulls\NullCompany.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Nulls\NullCompanyBrand.cs" />
+    <Compile Include="Entities\Nulls\NullHomepageCategory.cs" />
+    <Compile Include="Entities\Nulls\NullIpAddress.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Nulls\NullAsset.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Nulls\NullAssetCategory.cs" />
+    <Compile Include="Entities\Nulls\NullAssetFile.cs" />
+    <Compile Include="Entities\Nulls\NullAssetFilePath.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Nulls\NullAssetImageSize.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Nulls\NullAssetMetadata.cs" />
+    <Compile Include="Entities\Nulls\NullAssetType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Nulls\NullAssetWorkflow.cs" />
+    <Compile Include="Entities\Nulls\NullAssetWorkflowCommenter.cs" />
+    <Compile Include="Entities\Nulls\NullAssetWorkflowUser.cs" />
+    <Compile Include="Entities\Nulls\NullAuditAssetHistory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Nulls\NullAuditAssetSearch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Nulls\NullAuditAssetSearchKeyword.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Nulls\NullAuditAssetSearchResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Nulls\NullAuditUserHistory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Nulls\NullBrand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Nulls\NullCart.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Nulls\NullCategory.cs" />
+    <Compile Include="Entities\Nulls\NullCountry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Nulls\NullHomepage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Nulls\NullHomepageType.cs" />
+    <Compile Include="Entities\Nulls\NullLightbox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Nulls\NullLightboxAsset.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Nulls\NullLightboxBrand.cs" />
+    <Compile Include="Entities\Nulls\NullLightboxLinked.cs" />
+    <Compile Include="Entities\Nulls\NullLightboxSent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Nulls\NullMetadata.cs" />
+    <Compile Include="Entities\Nulls\NullBrandMetadataSetting.cs" />
+    <Compile Include="Entities\Nulls\NullOrder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Nulls\NullOrderItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Nulls\NullOrderItemComment.cs" />
+    <Compile Include="Entities\Nulls\NullPlugin.cs" />
+    <Compile Include="Entities\Nulls\NullUser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Nulls\NullUserBrand.cs" />
+    <Compile Include="Entities\Nulls\NullUserPasswordHistory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Nulls\NullWorkflow.cs" />
+    <Compile Include="Entities\Nulls\NullWorkflowUser.cs" />
+    <Compile Include="Entities\Properties\Asset.cs" />
+    <Compile Include="Entities\Properties\AssetCategory.cs" />
+    <Compile Include="Entities\Properties\AssetFile.cs" />
+    <Compile Include="Entities\Properties\AssetFilePath.cs" />
+    <Compile Include="Entities\Properties\AssetImageSize.cs" />
+    <Compile Include="Entities\Properties\AssetMetadata.cs" />
+    <Compile Include="Entities\Properties\AssetOrderHistory.cs" />
+    <Compile Include="Entities\Properties\AssetType.cs" />
+    <Compile Include="Entities\Properties\AssetWorkflow.cs" />
+    <Compile Include="Entities\Properties\AssetWorkflowCommenter.cs" />
+    <Compile Include="Entities\Properties\AssetWorkflowUser.cs" />
+    <Compile Include="Entities\Properties\AuditAssetHistory.cs" />
+    <Compile Include="Entities\Properties\AuditAssetSearch.cs" />
+    <Compile Include="Entities\Properties\AuditAssetSearchKeyword.cs" />
+    <Compile Include="Entities\Properties\AuditAssetSearchResult.cs" />
+    <Compile Include="Entities\Properties\AuditUserHistory.cs" />
+    <Compile Include="Entities\Properties\Brand.cs" />
+    <Compile Include="Entities\Properties\BrandMetadataSetting.cs" />
+    <Compile Include="Entities\Properties\Cart.cs" />
+    <Compile Include="Entities\Properties\Category.cs" />
+    <Compile Include="Entities\Properties\CompanyBrand.cs" />
+    <Compile Include="Entities\Properties\Country.cs" />
+    <Compile Include="Entities\Properties\Homepage.cs" />
+    <Compile Include="Entities\Properties\HomepageCategory.cs" />
+    <Compile Include="Entities\Properties\HomepageType.cs" />
+    <Compile Include="Entities\Properties\IpAddress.cs" />
+    <Compile Include="Entities\Properties\Lightbox.cs" />
+    <Compile Include="Entities\Properties\LightboxAsset.cs" />
+    <Compile Include="Entities\Properties\LightboxBrand.cs" />
+    <Compile Include="Entities\Properties\LightboxLinked.cs" />
+    <Compile Include="Entities\Properties\LightboxSent.cs" />
+    <Compile Include="Entities\Properties\Metadata.cs" />
+    <Compile Include="Entities\Properties\Order.cs" />
+    <Compile Include="Entities\Properties\OrderItem.cs" />
+    <Compile Include="Entities\Properties\OrderItemComment.cs" />
+    <Compile Include="Entities\Properties\Plugin.cs" />
+    <Compile Include="Entities\Properties\User.cs" />
+    <Compile Include="Entities\Properties\UserBrand.cs" />
+    <Compile Include="Entities\Properties\UserPasswordHistory.cs" />
+    <Compile Include="Entities\Properties\Workflow.cs" />
+    <Compile Include="Entities\Properties\WorkflowUser.cs" />
+    <Compile Include="Entities\Properties\AssetLink.cs" />
+    <Compile Include="Entities\Properties\AssetTypeFileExtension.cs" />
+    <Compile Include="Entities\Properties\Company.cs" />
+    <Compile Include="Entities\Properties\AssetMetadataTextField.cs" />
+    <Compile Include="Entities\Properties\AssetMetadataTextArea.cs" />
+    <Compile Include="Entities\Properties\BrandMetadataSelectableSetting.cs" />
+    <Compile Include="Entities\Standard\AssetLink.cs" />
+    <Compile Include="Entities\Standard\AssetMetadataTextField.cs" />
+    <Compile Include="Entities\Standard\AssetMetadataTextArea.cs" />
+    <Compile Include="Entities\Standard\AssetTypeFileExtension.cs" />
+    <Compile Include="Entities\Standard\BrandMetadataSelectableSetting.cs" />
+    <Compile Include="Entities\Standard\Company.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Standard\CompanyBrand.cs" />
+    <Compile Include="Entities\Standard\AssetOrderHistory.cs" />
+    <Compile Include="Entities\Standard\HomepageCategory.cs" />
+    <Compile Include="Entities\Standard\IpAddress.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Standard\Asset.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Standard\AssetCategory.cs" />
+    <Compile Include="Entities\Standard\AssetFile.cs" />
+    <Compile Include="Entities\Standard\AssetFilePath.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Standard\AssetImageSize.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Standard\AssetMetadata.cs" />
+    <Compile Include="Entities\Standard\AssetType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Standard\AssetWorkflow.cs" />
+    <Compile Include="Entities\Standard\AssetWorkflowCommenter.cs" />
+    <Compile Include="Entities\Standard\AssetWorkflowUser.cs" />
+    <Compile Include="Entities\Standard\AuditAssetHistory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Standard\AuditAssetSearch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Standard\AuditAssetSearchKeyword.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Standard\AuditAssetSearchResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Standard\AuditUserHistory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Standard\Brand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Standard\Cart.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Standard\Category.cs" />
+    <Compile Include="Entities\Standard\Country.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Standard\Homepage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Standard\HomepageType.cs" />
+    <Compile Include="Entities\Standard\Lightbox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Standard\LightboxAsset.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Standard\LightboxBrand.cs" />
+    <Compile Include="Entities\Standard\LightboxLinked.cs" />
+    <Compile Include="Entities\Standard\LightboxSent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Standard\Metadata.cs" />
+    <Compile Include="Entities\Standard\BrandMetadataSetting.cs" />
+    <Compile Include="Entities\Standard\Order.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Standard\OrderItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Standard\OrderItemComment.cs" />
+    <Compile Include="Entities\Standard\Plugin.cs" />
+    <Compile Include="Entities\Standard\User.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Standard\UserBrand.cs" />
+    <Compile Include="Entities\Standard\UserPasswordHistory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Entities\Standard\Workflow.cs" />
+    <Compile Include="Entities\Standard\WorkflowUser.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Finders\AssetLinkFinder.cs" />
+    <Compile Include="Finders\AssetMetadataTextFieldFinder.cs" />
+    <Compile Include="Finders\AssetMetadataTextAreaFinder.cs" />
+    <Compile Include="Finders\AssetTypeFileExtensionFinder.cs" />
+    <Compile Include="Finders\BrandMetadataSelectableSettingFinder.cs" />
+    <Compile Include="Finders\CompanyBrandFinder.cs" />
+    <Compile Include="Finders\CompanyFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\AssetOrderHistoryFinder.cs" />
+    <Compile Include="Finders\HomepageCategoryFinder.cs" />
+    <Compile Include="Finders\IpAddressFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\AssetCategoryFinder.cs" />
+    <Compile Include="Finders\AssetFileFinder.cs" />
+    <Compile Include="Finders\AssetFilePathFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\AssetFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\AssetImageSizeFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\AssetMetadataFinder.cs" />
+    <Compile Include="Finders\AssetTypeFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\AssetWorkflowCommenterFinder.cs" />
+    <Compile Include="Finders\AssetWorkflowFinder.cs" />
+    <Compile Include="Finders\AssetWorkflowUserFinder.cs" />
+    <Compile Include="Finders\AuditAssetHistoryFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\AuditAssetSearchFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\AuditAssetSearchKeywordFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\AuditAssetSearchResultFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\AuditUserHistoryFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\BrandFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\CartFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\CategoryFinder.cs" />
+    <Compile Include="Finders\CountryFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\HomepageFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\HomepageTypeFinder.cs" />
+    <Compile Include="Finders\LightboxAssetFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\LightboxBrandFinder.cs" />
+    <Compile Include="Finders\LightboxFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\LightboxLinkedFinder.cs" />
+    <Compile Include="Finders\LightboxSentFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\MetadataFinder.cs" />
+    <Compile Include="Finders\BrandMetadataSettingFinder.cs" />
+    <Compile Include="Finders\OrderFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\OrderItemCommentFinder.cs" />
+    <Compile Include="Finders\OrderItemFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\PluginFinder.cs" />
+    <Compile Include="Finders\Properties\AssetLinkFinder.cs" />
+    <Compile Include="Finders\Properties\AssetMetadataTextFieldFinder.cs" />
+    <Compile Include="Finders\Properties\AssetMetadataTextAreaFinder.cs" />
+    <Compile Include="Finders\Properties\AssetTypeFileExtensionFinder.cs" />
+    <Compile Include="Finders\Properties\BrandMetadataSelectableSettingFinder.cs" />
+    <Compile Include="Finders\Properties\CompanyBrandFinder.cs" />
+    <Compile Include="Finders\Properties\CompanyFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\Properties\AssetOrderHistoryFinder.cs" />
+    <Compile Include="Finders\Properties\HomepageCategoryFinder.cs" />
+    <Compile Include="Finders\Properties\IpAddressFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\Properties\AssetCategoryFinder.cs" />
+    <Compile Include="Finders\Properties\AssetFileFinder.cs" />
+    <Compile Include="Finders\Properties\AssetFilePathFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\Properties\AssetFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\Properties\AssetImageSizeFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\Properties\AssetMetadataFinder.cs" />
+    <Compile Include="Finders\Properties\AssetTypeFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\Properties\AssetWorkflowCommenterFinder.cs" />
+    <Compile Include="Finders\Properties\AssetWorkflowFinder.cs" />
+    <Compile Include="Finders\Properties\AssetWorkflowUserFinder.cs" />
+    <Compile Include="Finders\Properties\AuditAssetHistoryFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\Properties\AuditAssetSearchFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\Properties\AuditAssetSearchKeywordFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\Properties\AuditAssetSearchResultFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\Properties\AuditUserHistoryFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\Properties\BrandFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\Properties\CartFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\Properties\CategoryFinder.cs" />
+    <Compile Include="Finders\Properties\CountryFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\Properties\HomepageFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\Properties\HomepageTypeFinder.cs" />
+    <Compile Include="Finders\Properties\LightboxAssetFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\Properties\LightboxBrandFinder.cs" />
+    <Compile Include="Finders\Properties\LightboxFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\Properties\LightboxLinkedFinder.cs" />
+    <Compile Include="Finders\Properties\LightboxSentFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\Properties\MetadataFinder.cs" />
+    <Compile Include="Finders\Properties\BrandMetadataSettingFinder.cs" />
+    <Compile Include="Finders\Properties\OrderFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\Properties\OrderItemCommentFinder.cs" />
+    <Compile Include="Finders\Properties\OrderItemFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\Properties\PluginFinder.cs" />
+    <Compile Include="Finders\Properties\UserBrandFinder.cs" />
+    <Compile Include="Finders\Properties\UserFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\Properties\UserPasswordHistoryFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\Properties\WorkflowFinder.cs" />
+    <Compile Include="Finders\Properties\WorkflowUserFinder.cs" />
+    <Compile Include="Finders\UserBrandFinder.cs" />
+    <Compile Include="Finders\UserFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\UserPasswordHistoryFinder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Finders\WorkflowFinder.cs" />
+    <Compile Include="Finders\WorkflowUserFinder.cs" />
+    <Compile Include="Mappers\AssetLinkMapper.cs" />
+    <Compile Include="Mappers\AssetMetadataTextFieldMapper.cs" />
+    <Compile Include="Mappers\AssetMetadataTextAreaMapper.cs" />
+    <Compile Include="Mappers\AssetTypeFileExtensionMapper.cs" />
+    <Compile Include="Mappers\BrandMetadataSelectableSettingMapper.cs" />
+    <Compile Include="Mappers\CompanyBrandMapper.cs" />
+    <Compile Include="Mappers\CompanyMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\AssetOrderHistoryMapper.cs" />
+    <Compile Include="Mappers\HomepageCategoryMapper.cs" />
+    <Compile Include="Mappers\IpAddressMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\AssetCategoryMapper.cs" />
+    <Compile Include="Mappers\AssetFileMapper.cs" />
+    <Compile Include="Mappers\AssetFilePathMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\AssetImageSizeMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\AssetMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\AssetMetadataMapper.cs" />
+    <Compile Include="Mappers\AssetTypeMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\AssetWorkflowCommenterMapper.cs" />
+    <Compile Include="Mappers\AssetWorkflowMapper.cs" />
+    <Compile Include="Mappers\AssetWorkflowUserMapper.cs" />
+    <Compile Include="Mappers\AssetWorkflowUserStatusMapper.cs" />
+    <Compile Include="Mappers\AuditAssetHistoryMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\AuditAssetSearchKeywordMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\AuditAssetSearchMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\AuditAssetSearchResultMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\AuditUserHistoryMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\BrandMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\CartMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\CategoryMapper.cs" />
+    <Compile Include="Mappers\CountryMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\HomepageMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\HomepageTypeMapper.cs" />
+    <Compile Include="Mappers\LightboxAssetMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\LightboxBrandMapper.cs" />
+    <Compile Include="Mappers\LightboxLinkedMapper.cs" />
+    <Compile Include="Mappers\LightboxMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\LightboxSentMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\MetadataMapper.cs" />
+    <Compile Include="Mappers\BrandMetadataSettingMapper.cs" />
+    <Compile Include="Mappers\OrderItemCommentMapper.cs" />
+    <Compile Include="Mappers\OrderItemMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\OrderMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\PluginMapper.cs" />
+    <Compile Include="Mappers\Properties\AssetLinkMapper.cs" />
+    <Compile Include="Mappers\Properties\AssetMetadataTextFieldMapper.cs" />
+    <Compile Include="Mappers\Properties\AssetMetadataTextAreaMapper.cs" />
+    <Compile Include="Mappers\Properties\AssetTypeFileExtensionMapper.cs" />
+    <Compile Include="Mappers\Properties\BrandMetadataSelectableSettingMapper.cs" />
+    <Compile Include="Mappers\Properties\CompanyBrandMapper.cs" />
+    <Compile Include="Mappers\Properties\CompanyMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\Properties\AssetOrderHistoryMapper.cs" />
+    <Compile Include="Mappers\Properties\HomepageCategoryMapper.cs" />
+    <Compile Include="Mappers\Properties\IpAddressMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\Properties\AssetCategoryMapper.cs" />
+    <Compile Include="Mappers\Properties\AssetFileMapper.cs" />
+    <Compile Include="Mappers\Properties\AssetFilePathMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\Properties\AssetImageSizeMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\Properties\AssetMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\Properties\AssetMetadataMapper.cs" />
+    <Compile Include="Mappers\Properties\AssetTypeMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\Properties\AssetWorkflowCommenterMapper.cs" />
+    <Compile Include="Mappers\Properties\AssetWorkflowMapper.cs" />
+    <Compile Include="Mappers\Properties\AssetWorkflowUserMapper.cs" />
+    <Compile Include="Mappers\Properties\AuditAssetHistoryMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\Properties\AuditAssetSearchKeywordMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\Properties\AuditAssetSearchMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\Properties\AuditAssetSearchResultMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\Properties\AuditUserHistoryMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\Properties\BrandMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\Properties\CartMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\Properties\CategoryMapper.cs" />
+    <Compile Include="Mappers\Properties\CountryMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\Properties\HomepageMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\Properties\HomepageTypeMapper.cs" />
+    <Compile Include="Mappers\Properties\LightboxAssetMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\Properties\LightboxBrandMapper.cs" />
+    <Compile Include="Mappers\Properties\LightboxLinkedMapper.cs" />
+    <Compile Include="Mappers\Properties\LightboxMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\Properties\LightboxSentMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\Properties\MetadataMapper.cs" />
+    <Compile Include="Mappers\Properties\BrandMetadataSettingMapper.cs" />
+    <Compile Include="Mappers\Properties\OrderItemCommentMapper.cs" />
+    <Compile Include="Mappers\Properties\OrderItemMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\Properties\OrderMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\Properties\PluginMapper.cs" />
+    <Compile Include="Mappers\Properties\UserBrandMapper.cs" />
+    <Compile Include="Mappers\Properties\UserMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\Properties\UserPasswordHistoryMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\Properties\WorkflowMapper.cs" />
+    <Compile Include="Mappers\Properties\WorkflowUserMapper.cs" />
+    <Compile Include="Mappers\UserBrandMapper.cs" />
+    <Compile Include="Mappers\UserMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\UserPasswordHistoryMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\WorkflowMapper.cs" />
+    <Compile Include="Mappers\WorkflowUserMapper.cs" />
+    <Compile Include="Other\AssetReportMapper.cs" />
+    <Compile Include="Other\TextExtractor.cs" />
+    <Compile Include="Other\UserIdFinder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Schemas\FocusOPEN_Plugin_V1.cs">
+      <DependentUpon>FocusOPEN_Plugin_V1.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FocusOPEN.Shared\FocusOPEN.Shared.csproj">
+      <Project>{78B3A699-06F2-4E3A-A9B5-CB56E7E249C6}</Project>
+      <Name>FocusOPEN.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Schemas\FocusOPEN_Plugin_V1.xsd">
+      <SubType>
+      </SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Target Name="AfterBuild">
+    <Exec Command="copy &quot;$(TargetPath)&quot; &quot;$(TargetDir)../../../Dependencies/FocusOPEN/$(TargetFileName)&quot; /Y" />
+  </Target>
+</Project>

@@ -1,0 +1,65 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminTemplate.Master.cs" Inherits="FocusOPEN.Website.AdminTemplate" %>
+<%@ Register Assembly="FocusOPEN.Website" Namespace="FocusOPEN.Website.Controls" TagPrefix="app" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+	<title>[Admin]</title>
+	
+</head>
+<body>
+
+<script type="text/javascript" src="<%=ResolveUrl("~/Includes/Javascript/jQuery/jquery-1.4.1.min.js")%>"></script>
+<script type="text/javascript" src="<%=ResolveUrl("~/Includes/Javascript/jQuery/jquery.dropdown.js")%>"></script>
+<script type="text/javascript" src="<%=ResolveUrl("~/Includes/Javascript/jQuery/jquery-ui-1.7.2.custom.min.js") %>"></script>
+<script type="text/javascript" src="<%=ResolveUrl("~/Includes/Javascript/Overlib/Overlib.js")%>"></script>
+<script type="text/javascript" src="<%=ResolveUrl("~/Includes/Javascript/Global.js")%>"></script>
+
+<script type="text/javascript" src="<%=ResolveUrl("~/Includes/Javascript/jQuery/jquery.textarearesizer.js") %>"></script>
+<script type="text/javascript" src="<%=ResolveUrl("~/Includes/Javascript/Admin.js")%>"></script>
+
+<asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+
+<link rel="Stylesheet" type="text/css" href="<%=ResolveUrl("~/Includes/Css/jQuery-UI/smoothness/jquery-ui-1.7.2.custom.css")%>" />
+<link rel="stylesheet" href="<%=ResolveUrl("~/Includes/Css/Admin.css")%>" type="text/css"/>
+<link rel="stylesheet" href="<%=ResolveUrl("~/Includes/Css/AdminMenu.css")%>" type="text/css"/>
+<!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="<%=ResolveUrl("~/Includes/Css/AdminMenu_IE.css")%>" media="screen" /><![endif]-->
+
+<app:BrandHeader ID="BrandHeader1" Css="Basic|Styles|Admin|Other" runat="server" />
+
+<app:DevServerHeader ID="DevServerHeader1" runat="server" />
+<form id="form1" runat="server">
+	<aspajax:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true" EnablePartialRendering="true"/>
+	<div class="AdmWrapper">
+		<div class="AdmHdrPanel"></div>
+		<div class="AdmNavPanel">
+			<div class="Left">
+				<app:AdminNavigation ID="AdminNavigation1" runat="server" /> 
+			</div> 
+			<div class="Right">
+				<a id="UserNameHref" href="~/MyAccount/EditProfile.aspx" class="LoginTxt" runat="server">[Name]</a> <span class="LoginTxt">logged in</span> | <a id="A1" href="~/Login.aspx?action=logout" class="LoginTxt" runat="server">Log Out</a>
+			</div>
+		</div> 
+		<div class="Clear"></div>
+		<div class="AdmHdr">
+			<div class="Left AdmHdrMrg"><span class="AdmHdrTxt Bold">Admin<%=AdminNavigation.BreadcrumbsSpacer%><asp:Label ID="BreadCrumbsLabel" runat="server" /></span></div>
+			<div class="Right AdmHdrMrg"><app:HelpHyperLink ID="HelpHyperLink1" HelpPage="index.htm#admin" CssClass="AdmHelpTxt" Text="admin help" runat="server" /></div>
+		</div>
+		
+		<asp:ContentPlaceHolder ID="MainContent" runat="server" />
+		
+		<div class="AdmFtrPanel" style="padding-top:10px;">
+			<div class="Left">
+				<app:AttributionFooter ID="AttributionFooter" runat="server" />
+			</div>
+			<div class="Right FtrMrg">
+				<a href="javascript:showTermsConditions();" class="FooterTxt">Terms &amp; Conditions</a> | 
+				<app:HelpHyperLink ID="HelpHyperLink2" HelpPage="index.htm#admin" CssClass="FooterTxt" Text="Help" runat="server" /> | 
+				<span class="FooterTxt">&copy; <%=FocusOPEN.Website.Components.WebsiteBrandManager.GetBrand().OrganisationName%> <%=DateTime.Now.Year.ToString()%></span>
+			</div>
+		</div>
+	</div>
+</form>
+</body>
+</html>
+
+<app:VersionLabel ID="VersionInfoLabel" runat="server" />

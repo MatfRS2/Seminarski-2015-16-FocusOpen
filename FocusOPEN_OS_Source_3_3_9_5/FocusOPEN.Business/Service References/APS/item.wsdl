@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IProcessingService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <msf:WindowsTransportSecurity xmlns:msf="http://schemas.microsoft.com/ws/2006/05/framing/policy">
+                  <msf:ProtectionLevel>EncryptAndSign</msf:ProtectionLevel>
+                </msf:WindowsTransportSecurity>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8080/FocusOPEN.APS/ProcessingService/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8080/FocusOPEN.APS/ProcessingService/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8080/FocusOPEN.APS/ProcessingService/?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:8080/FocusOPEN.APS/ProcessingService/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/FocusOPEN.APS" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IProcessingService_GetSupportedExtensions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSupportedExtensions" />
+  </wsdl:message>
+  <wsdl:message name="IProcessingService_GetSupportedExtensions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSupportedExtensionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProcessingService_FileExtensionsGenerated_InputMessage">
+    <wsdl:part name="parameters" element="tns:FileExtensionsGenerated" />
+  </wsdl:message>
+  <wsdl:message name="IProcessingService_FileExtensionsGenerated_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FileExtensionsGeneratedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProcessingService_GetPlugins_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlugins" />
+  </wsdl:message>
+  <wsdl:message name="IProcessingService_GetPlugins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPluginsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProcessingService_SubmitJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitJob" />
+  </wsdl:message>
+  <wsdl:message name="IProcessingService_SubmitJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubmitJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProcessingService_ProcessJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessJob" />
+  </wsdl:message>
+  <wsdl:message name="IProcessingService_ProcessJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProcessingService_GetAssetMetadata_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetMetadata" />
+  </wsdl:message>
+  <wsdl:message name="IProcessingService_GetAssetMetadata_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetMetadataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProcessingService_GetExtensionGenerated_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExtensionGenerated" />
+  </wsdl:message>
+  <wsdl:message name="IProcessingService_GetExtensionGenerated_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExtensionGeneratedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProcessingService_GetServiceStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceStatus" />
+  </wsdl:message>
+  <wsdl:message name="IProcessingService_GetServiceStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProcessingService_GetVersionInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVersionInfo" />
+  </wsdl:message>
+  <wsdl:message name="IProcessingService_GetVersionInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVersionInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IProcessingService">
+    <wsdl:operation name="GetSupportedExtensions">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProcessingService/GetSupportedExtensions" message="tns:IProcessingService_GetSupportedExtensions_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProcessingService/GetSupportedExtensionsResponse" message="tns:IProcessingService_GetSupportedExtensions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FileExtensionsGenerated">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProcessingService/FileExtensionsGenerated" message="tns:IProcessingService_FileExtensionsGenerated_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProcessingService/FileExtensionsGeneratedResponse" message="tns:IProcessingService_FileExtensionsGenerated_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlugins">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProcessingService/GetPlugins" message="tns:IProcessingService_GetPlugins_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProcessingService/GetPluginsResponse" message="tns:IProcessingService_GetPlugins_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProcessingService/SubmitJob" message="tns:IProcessingService_SubmitJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProcessingService/SubmitJobResponse" message="tns:IProcessingService_SubmitJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProcessingService/ProcessJob" message="tns:IProcessingService_ProcessJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProcessingService/ProcessJobResponse" message="tns:IProcessingService_ProcessJob_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetMetadata">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProcessingService/GetAssetMetadata" message="tns:IProcessingService_GetAssetMetadata_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProcessingService/GetAssetMetadataResponse" message="tns:IProcessingService_GetAssetMetadata_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExtensionGenerated">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProcessingService/GetExtensionGenerated" message="tns:IProcessingService_GetExtensionGenerated_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProcessingService/GetExtensionGeneratedResponse" message="tns:IProcessingService_GetExtensionGenerated_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProcessingService/GetServiceStatus" message="tns:IProcessingService_GetServiceStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProcessingService/GetServiceStatusResponse" message="tns:IProcessingService_GetServiceStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVersionInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProcessingService/GetVersionInfo" message="tns:IProcessingService_GetVersionInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProcessingService/GetVersionInfoResponse" message="tns:IProcessingService_GetVersionInfo_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IProcessingService" type="tns:IProcessingService">
+    <wsp:PolicyReference URI="#NetTcpBinding_IProcessingService_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetSupportedExtensions">
+      <soap12:operation soapAction="http://tempuri.org/IProcessingService/GetSupportedExtensions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FileExtensionsGenerated">
+      <soap12:operation soapAction="http://tempuri.org/IProcessingService/FileExtensionsGenerated" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlugins">
+      <soap12:operation soapAction="http://tempuri.org/IProcessingService/GetPlugins" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitJob">
+      <soap12:operation soapAction="http://tempuri.org/IProcessingService/SubmitJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessJob">
+      <soap12:operation soapAction="http://tempuri.org/IProcessingService/ProcessJob" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetMetadata">
+      <soap12:operation soapAction="http://tempuri.org/IProcessingService/GetAssetMetadata" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExtensionGenerated">
+      <soap12:operation soapAction="http://tempuri.org/IProcessingService/GetExtensionGenerated" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceStatus">
+      <soap12:operation soapAction="http://tempuri.org/IProcessingService/GetServiceStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVersionInfo">
+      <soap12:operation soapAction="http://tempuri.org/IProcessingService/GetVersionInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>

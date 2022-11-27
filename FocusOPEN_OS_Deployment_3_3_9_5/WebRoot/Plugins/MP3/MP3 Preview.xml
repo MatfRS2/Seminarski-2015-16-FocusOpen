@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SchemaVersion="1" Disabled="false">
+  <Name>MP3 Preview</Name>
+  <PluginVersion>1.0</PluginVersion>
+  <RegistrationKey>6101ce70-f2ea-4a8b-ae6e-900f8795f248</RegistrationKey>
+  <RequireAllResourceFiles>false</RequireAllResourceFiles>
+  <ForcePreviewFormat>false</ForcePreviewFormat>
+  <FileExtensions>
+    <FileExtension>mp3</FileExtension>
+  </FileExtensions>
+  <Contexts>
+    <Context Name="Default">
+      <UseForType>Standard</UseForType>
+      <Markup src=""><![CDATA[
+		
+			<object type="application/x-shockwave-flash" data="~/Images/Players/AudioPlayer.swf" width="200" height="20">
+				<param name="movie" value="~/Images/Players/AudioPlayer.swf" />
+				<param name="bgcolor" value="#ffffff" />
+				<param name="flashVars" value="mp3=[ABSOLUTE-PREVIEW-URL]&amp;autoplay=0&amp;showstop=1&amp;showvolume=1&amp;" />
+			</object>
+		
+     	]]></Markup>
+    </Context>
+  </Contexts>
+</Plugin>

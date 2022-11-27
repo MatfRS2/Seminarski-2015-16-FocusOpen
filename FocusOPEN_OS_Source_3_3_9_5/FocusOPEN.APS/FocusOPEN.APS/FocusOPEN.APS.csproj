@@ -1,0 +1,175 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A15299C6-C7C1-4FF0-8E40-449827A923C6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FocusOPEN.APS</RootNamespace>
+    <AssemblyName>FocusOPEN.APS</AssemblyName>
+    <ProjectTypeGuids>{3D9AD99F-2412-4246-B90B-4EAA41C64699};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <StartArguments>/client:"WcfTestClient.exe"</StartArguments>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencies\Log4net\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.SQLite">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencies\SQLite\$(Platform)\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>True</Private>
+      <HintPath>..\..\Dependencies\SQLite\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APSModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>APSModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\AssemblyInfo.cs" />
+    <Compile Include="Components\BaseService.cs" />
+    <Compile Include="Components\CommandLineExecuter.cs" />
+    <Compile Include="Components\DBHelper.cs" />
+    <Compile Include="Components\DefaultPlugins\AudioProcessingPlugin.cs" />
+    <Compile Include="Components\DefaultPlugins\GenericCommandLinePlugin.cs" />
+    <Compile Include="Components\DefaultPlugins\ImageMagickProcessingPlugin.cs" />
+    <Compile Include="Components\DefaultPlugins\NativeImageProcessingPlugin.cs" />
+    <Compile Include="Components\DefaultPlugins\VideoProcessingPlugin.cs" />
+    <Compile Include="Components\Enums.cs" />
+    <Compile Include="Components\ImageProcessingPluginBase.cs" />
+    <Compile Include="Components\Utils\Extensions.cs" />
+    <Compile Include="Components\JobProcessor.cs" />
+    <Compile Include="Components\Managers\ProcessingManager.cs" />
+    <Compile Include="Components\Managers\JobManager.cs" />
+    <Compile Include="Components\Managers\LogManager.cs" />
+    <Compile Include="Components\Managers\PluginManager.cs" />
+    <Compile Include="Components\MetadataExtractor.cs" />
+    <Compile Include="Components\PluginBase.cs" />
+    <Compile Include="Components\PluginInfo.cs" />
+    <Compile Include="Components\Singleton.cs" />
+    <Compile Include="Components\Utils\HttpPoster.cs" />
+    <Compile Include="Components\Utils\PathUtils.cs" />
+    <Compile Include="Entities\Job.cs" />
+    <Compile Include="Entities\JobResult.cs" />
+    <Compile Include="Entities\LogEntry.cs" />
+    <Compile Include="Entities\QueuedJob.cs" />
+    <Compile Include="Entities\ServiceStatus.cs" />
+    <Compile Include="Entities\VersionInfo.cs" />
+    <Compile Include="Exceptions\MissingSettingException.cs" />
+    <Compile Include="Exceptions\PluginInvocationException.cs" />
+    <Compile Include="Exceptions\PluginNotFoundException.cs" />
+    <Compile Include="ServiceImplementations\ProcessingService.cs" />
+    <Compile Include="ServiceContracts\IProcessingService.cs" />
+    <Compile Include="ServiceContracts\ILoggingService.cs" />
+    <Compile Include="ServiceImplementations\LoggingService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="APSModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>APSModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EmbeddedResource Include="Config\DBSchema.SQL" />
+    <None Include="Config\Log4Net.config" />
+    <None Include="Config\Plugins.config" />
+    <None Include="Licence.rtf" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\Dependencies\Targets\CommunityTasks\MSBuild.Community.Tasks.Targets" />
+  <Import Project="..\Dependencies\Targets\ExtensionPack\MSBuild.ExtensionPack.tasks" />
+  <Target Name="CleanFolders">
+    <RemoveDir Directories=".\\TempBuildDir" Condition="Exists('.\\TempBuildDir')" />
+    <RemoveDir Directories=".\\Debug" Condition="Exists('.\\Debug')" />
+    <RemoveDir Directories=".\\Release" Condition="Exists('.\\Release')" />
+    <Message Text="Cleaned old build folders" />
+  </Target>
+  <Target Name="BeforeBuild">
+    <CallTarget Targets="CleanFolders" />
+    <ItemGroup>
+      <AssemblyInfoFiles Include="$(ProjectDir)Properties\AssemblyInfo.cs" />
+    </ItemGroup>
+    <MSBuild.ExtensionPack.Framework.AssemblyInfo AssemblyInfoFiles="@(AssemblyInfoFiles)" AssemblyBuildNumberType="YearWeekDay" FirstDayOfWeek="Monday" AssemblyRevisionType="AutoIncrement" AssemblyRevisionFormat="0" />
+  </Target>
+  <Target Name="AfterBuild">
+    <ItemGroup>
+      <ConfigFiles Include="$(ProjectDir)Config\*.*" />
+    </ItemGroup>
+    <MakeDir Directories="$(TargetDir)Logs" Condition="!Exists('$(TargetDir)Logs')" />
+    <MakeDir Directories="$(TargetDir)Config" Condition="!Exists('$(TargetDir)Config')" />
+    <Copy SourceFiles="@(ConfigFiles)" DestinationFolder="$(TargetDir)Config\" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{3D9AD99F-2412-4246-B90B-4EAA41C64699}">
+        <WcfProjectProperties>
+          <AutoStart>True</AutoStart>
+        </WcfProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

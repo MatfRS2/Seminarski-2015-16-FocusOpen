@@ -1,0 +1,7 @@
+C:\ProjectsVS\OpenSource\FocusOpen\FocusOPEN_OS_Source_3_3_9_5\FocusOPEN.Shared\bin\Debug\FocusOPEN.Shared.dll
+C:\ProjectsVS\OpenSource\FocusOpen\FocusOPEN_OS_Source_3_3_9_5\FocusOPEN.Shared\bin\Debug\FocusOPEN.Shared.pdb
+C:\ProjectsVS\OpenSource\FocusOpen\FocusOPEN_OS_Source_3_3_9_5\FocusOPEN.Shared\bin\Debug\log4net.dll
+C:\ProjectsVS\OpenSource\FocusOpen\FocusOPEN_OS_Source_3_3_9_5\FocusOPEN.Shared\bin\Debug\log4net.xml
+C:\ProjectsVS\OpenSource\FocusOpen\FocusOPEN_OS_Source_3_3_9_5\FocusOPEN.Shared\obj\Debug\ResolveAssemblyReference.cache
+C:\ProjectsVS\OpenSource\FocusOpen\FocusOPEN_OS_Source_3_3_9_5\FocusOPEN.Shared\obj\Debug\FocusOPEN.Shared.dll
+C:\ProjectsVS\OpenSource\FocusOpen\FocusOPEN_OS_Source_3_3_9_5\FocusOPEN.Shared\obj\Debug\FocusOPEN.Shared.pdb

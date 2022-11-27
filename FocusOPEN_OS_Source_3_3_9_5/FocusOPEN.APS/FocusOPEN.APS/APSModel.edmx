@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="APSModel.Store" Alias="Self" Provider="System.Data.SQLite" ProviderManifestToken="ISO8601" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="APSModelStoreContainer">
+          <EntitySet Name="APSDebugLog" EntityType="APSModel.Store.APSDebugLog" store:Type="Tables" />
+          <EntitySet Name="APSLog" EntityType="APSModel.Store.APSLog" store:Type="Tables" />
+          <EntitySet Name="APSQueuedJob" EntityType="APSModel.Store.APSQueuedJob" store:Type="Tables" />
+        </EntityContainer>
+        <EntityType Name="APSDebugLog">
+          <Key>
+            <PropertyRef Name="APSDebugLogId" />
+          </Key>
+          <Property Name="APSDebugLogId" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="Thread" Type="nvarchar" Nullable="false" />
+          <Property Name="Level" Type="nvarchar" Nullable="false" />
+          <Property Name="Logger" Type="nvarchar" Nullable="false" />
+          <Property Name="Message" Type="nvarchar" Nullable="false" />
+        </EntityType>
+        <EntityType Name="APSLog">
+          <Key>
+            <PropertyRef Name="LogId" />
+          </Key>
+          <Property Name="LogId" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="JobId" Type="integer" Nullable="false" />
+          <Property Name="Message" Type="nvarchar" Nullable="false" MaxLength="5000" />
+          <Property Name="Date" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="APSQueuedJob">
+          <Key>
+            <PropertyRef Name="QueuedJobId" />
+          </Key>
+          <Property Name="QueuedJobId" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AssetId" Type="integer" Nullable="false" />
+          <Property Name="InputPath" Type="nvarchar" Nullable="false" MaxLength="1000" />
+          <Property Name="WatermarkPath" Type="nvarchar" MaxLength="1000" />
+          <Property Name="PluginName" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="CreateThumbnail" Type="bit" Nullable="false" />
+          <Property Name="CreatePreview" Type="bit" Nullable="false" />
+          <Property Name="OverrideHeight" Type="integer" Nullable="false" />
+          <Property Name="OverrideWidth" Type="integer" Nullable="false" />
+          <Property Name="DateAdded" Type="datetime" Nullable="false" />
+          <Property Name="DateProcessed" Type="datetime" />
+          <Property Name="QueuedJobStatusId" Type="integer" Nullable="false" />
+          <Property Name="Message" Type="nvarchar" Nullable="false" MaxLength="5000" />
+          <Property Name="CallbackUrl" Type="nvarchar" Nullable="false" MaxLength="1000" />
+          <Property Name="AdditionalData" Type="nvarchar" Nullable="false" MaxLength="5000" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="APSModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="APSEntities">
+          <EntitySet Name="APSLog" EntityType="APSModel.APSLog" />
+          <EntitySet Name="APSQueuedJob" EntityType="APSModel.APSQueuedJob" />
+          <EntitySet Name="APSDebugLog" EntityType="APSModel.APSDebugLog" /></EntityContainer>
+        <EntityType Name="APSLog">
+          <Key>
+            <PropertyRef Name="LogId" /></Key>
+          <Property Name="LogId" Type="Int64" Nullable="false" />
+          <Property Name="JobId" Type="Int64" Nullable="false" />
+          <Property Name="Message" Type="String" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" /></EntityType>
+        <EntityType Name="APSQueuedJob">
+          <Key>
+            <PropertyRef Name="QueuedJobId" /></Key>
+          <Property Name="QueuedJobId" Type="Int64" Nullable="false" />
+          <Property Name="AssetId" Type="Int64" Nullable="false" />
+          <Property Name="InputPath" Type="String" Nullable="false" />
+          <Property Name="WatermarkPath" Type="String" Nullable="true" />
+          <Property Name="PluginName" Type="String" Nullable="false" />
+          <Property Name="CreateThumbnail" Type="Boolean" Nullable="false" />
+          <Property Name="CreatePreview" Type="Boolean" Nullable="false" />
+          <Property Name="OverrideHeight" Type="Int32" Nullable="false" />
+          <Property Name="OverrideWidth" Type="Int32" Nullable="false" />
+          <Property Name="DateAdded" Type="DateTime" Nullable="false" />
+          <Property Name="DateProcessed" Type="DateTime" Nullable="true" />
+          <Property Name="QueuedJobStatusId" Type="Int64" Nullable="false" />
+          <Property Name="Message" Type="String" Nullable="false" />
+          <Property Name="CallbackUrl" Type="String" Nullable="false" />
+          <Property Name="AdditionalData" Type="String" Nullable="false" />
+          </EntityType>
+        <EntityType Name="APSDebugLog">
+          <Key>
+            <PropertyRef Name="APSDebugLogId" /></Key>
+          <Property Name="APSDebugLogId" Type="Int64" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" />
+          <Property Name="Thread" Type="String" Nullable="false" />
+          <Property Name="Level" Type="String" Nullable="false" />
+          <Property Name="Logger" Type="String" Nullable="false" />
+          <Property Name="Message" Type="String" Nullable="false" /></EntityType></Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="APSModelStoreContainer" CdmEntityContainer="APSEntities">
+          <EntitySetMapping Name="APSLog">
+            <EntityTypeMapping TypeName="IsTypeOf(APSModel.APSLog)">
+              <MappingFragment StoreEntitySet="APSLog">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="JobId" ColumnName="JobId" />
+                <ScalarProperty Name="LogId" ColumnName="LogId" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="APSQueuedJob">
+            <EntityTypeMapping TypeName="IsTypeOf(APSModel.APSQueuedJob)">
+              <MappingFragment StoreEntitySet="APSQueuedJob">
+                <ScalarProperty Name="CallbackUrl" ColumnName="CallbackUrl" />
+                <ScalarProperty Name="AdditionalData" ColumnName="AdditionalData" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="QueuedJobStatusId" ColumnName="QueuedJobStatusId" />
+                <ScalarProperty Name="DateProcessed" ColumnName="DateProcessed" />
+                <ScalarProperty Name="DateAdded" ColumnName="DateAdded" />
+                <ScalarProperty Name="CreatePreview" ColumnName="CreatePreview" />
+                <ScalarProperty Name="CreateThumbnail" ColumnName="CreateThumbnail" />
+                <ScalarProperty Name="OverrideHeight" ColumnName="OverrideHeight" />
+                <ScalarProperty Name="OverrideWidth" ColumnName="OverrideWidth" />
+                <ScalarProperty Name="PluginName" ColumnName="PluginName" />
+                <ScalarProperty Name="WatermarkPath" ColumnName="WatermarkPath" />
+                <ScalarProperty Name="InputPath" ColumnName="InputPath" />
+                <ScalarProperty Name="AssetId" ColumnName="AssetId" />
+                <ScalarProperty Name="QueuedJobId" ColumnName="QueuedJobId" /></MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="APSDebugLog">
+            <EntityTypeMapping TypeName="IsTypeOf(APSModel.APSDebugLog)">
+              <MappingFragment StoreEntitySet="APSDebugLog">
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Logger" ColumnName="Logger" />
+                <ScalarProperty Name="Level" ColumnName="Level" />
+                <ScalarProperty Name="Thread" ColumnName="Thread" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="APSDebugLogId" ColumnName="APSDebugLogId" /></MappingFragment></EntityTypeMapping></EntitySetMapping></EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="APSModel">
+        <EntityTypeShape EntityType="APSModel.APSLog" Width="1.5" PointX="3.375" PointY="0.75" Height="1.787985026041667" />
+        <EntityTypeShape EntityType="APSModel.APSQueuedJob" Width="1.5" PointX="1.625" PointY="0.75" Height="3.518697916666667" />
+        <EntityTypeShape EntityType="APSModel.APSDebugLog" Width="1.5" PointX="5.125" PointY="0.75" Height="2.1725878906249996" /></Diagram></edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

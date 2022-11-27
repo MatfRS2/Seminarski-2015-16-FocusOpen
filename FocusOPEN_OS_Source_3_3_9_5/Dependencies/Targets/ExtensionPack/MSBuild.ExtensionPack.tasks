@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<PropertyGroup>
+		<ExtensionTasksPath>.\</ExtensionTasksPath>
+		<ExtensionTasksLib>$(ExtensionTasksPath)\MSBuild.ExtensionPack.dll</ExtensionTasksLib>
+	</PropertyGroup>
+
+    <!-- ============== Framework ============== -->
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.CodeQuality.FxCop"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Communication.Email"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Communication.Twitter"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Compression.Cab"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Computer.ActiveDirectory"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Computer.ComponentServices"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Computer.EnvironmentVariable"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Computer.EventLog"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Computer.EventSource"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Computer.Network"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Computer.PerformanceCounters"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Computer.Registry"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Computer.SystemDrive"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Computer.WindowsService"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Computer.WshShell"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.FileSystem.Detokenise"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.FileSystem.File"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.FileSystem.FileVersion"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.FileSystem.FindUnder"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.FileSystem.Folder"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.FileSystem.RoboCopy"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.FileSystem.Share"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Framework.Assembly"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Framework.AssemblyInfo"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Framework.DateAndTime"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Framework.DynamicExecute"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Framework.Gac"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Framework.GenericTool"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Framework.Guid"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Framework.Metadata"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Framework.MSBuildHelper"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Framework.UpdateMetadata"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Framework.Signing"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Framework.TextString"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Framework.Thread"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Management.Wmi"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Multimedia.Sound"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Science.Maths"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Security.Certificate"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.SqlServer.SqlCmd"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.SqlServer.SqlExecute"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.SqlServer.SqlVersion"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.UI.Console"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.UI.Dialog"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.VisualStudio.SourceSafe"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.VisualStudio.TfsSource"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.VisualStudio.TfsSourceAdmin"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.VisualStudio.TfsVersion"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.VisualStudio.VB6"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.VisualStudio.VSDevEnv"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Web.HttpWebRequest"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Web.Iis6AppPool"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Web.Iis6ServiceExtensionFile"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Web.Iis6VirtualDirectory"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Web.Iis6Website"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Web.WebClient"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Xml.XmlFile"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksLib)" TaskName="MSBuild.ExtensionPack.Xml.XmlTask"/>
+
+
+    <!-- ============== BizTalk ============== -->
+    <UsingTask AssemblyFile="$(ExtensionTasksPath)MSBuild.ExtensionPack.BizTalk.dll" TaskName="MSBuild.ExtensionPack.BizTalk.BizTalkApplication"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksPath)MSBuild.ExtensionPack.BizTalk.dll" TaskName="MSBuild.ExtensionPack.BizTalk.BizTalkAssembly"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksPath)MSBuild.ExtensionPack.BizTalk.dll" TaskName="MSBuild.ExtensionPack.BizTalk.BizTalkHost"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksPath)MSBuild.ExtensionPack.BizTalk.dll" TaskName="MSBuild.ExtensionPack.BizTalk.BizTalkHostInstance"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksPath)MSBuild.ExtensionPack.BizTalk.dll" TaskName="MSBuild.ExtensionPack.BizTalk.BizTalkOrchestration"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksPath)MSBuild.ExtensionPack.BizTalk.dll" TaskName="MSBuild.ExtensionPack.BizTalk.BizTalkSendHandler"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksPath)MSBuild.ExtensionPack.BizTalk.dll" TaskName="MSBuild.ExtensionPack.BizTalk.BizTalkSendPort"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksPath)MSBuild.ExtensionPack.BizTalk.dll" TaskName="MSBuild.ExtensionPack.BizTalk.BizTalkReceiveHandler"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksPath)MSBuild.ExtensionPack.BizTalk.dll" TaskName="MSBuild.ExtensionPack.BizTalk.BizTalkReceivePort"/>
+
+
+    <!-- ============== HyperV ============== -->
+    <UsingTask AssemblyFile="$(ExtensionTasksPath)\MSBuild.ExtensionPack.HyperV.dll" TaskName="MSBuild.ExtensionPack.Virtualisation.HyperV"/>
+
+
+    <!-- ============== Iis7 ============== -->
+    <UsingTask AssemblyFile="$(ExtensionTasksPath)MSBuild.ExtensionPack.Iis7.dll" TaskName="MSBuild.ExtensionPack.Web.Iis7Application"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksPath)MSBuild.ExtensionPack.Iis7.dll" TaskName="MSBuild.ExtensionPack.Web.Iis7AppPool"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksPath)MSBuild.ExtensionPack.Iis7.dll" TaskName="MSBuild.ExtensionPack.Web.Iis7Binding"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksPath)MSBuild.ExtensionPack.Iis7.dll" TaskName="MSBuild.ExtensionPack.Web.Iis7Website"/>
+
+
+    <!-- ============== JSharp ============== -->
+    <UsingTask AssemblyFile="$(ExtensionTasksPath)MSBuild.ExtensionPack.JSharp.dll" TaskName="MSBuild.ExtensionPack.Compression.Zip"/>
+
+
+    <!-- ============== StyleCop ============== -->
+    <UsingTask AssemblyFile="$(MSBuildExtensionsPath)\Microsoft\StyleCop\v4.4\MSBuild.ExtensionPack.StyleCop.dll" TaskName="MSBuild.ExtensionPack.CodeQuality.StyleCop"/>
+
+
+    <!-- ============== Sql2005 ============== -->
+    <UsingTask AssemblyFile="$(ExtensionTasksPath)\MSBuild.ExtensionPack.Sql2005.dll" TaskName="MSBuild.ExtensionPack.Sql2005.Database"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksPath)\MSBuild.ExtensionPack.Sql2005.dll" TaskName="MSBuild.ExtensionPack.Sql2005.Server"/>
+
+
+    <!-- ============== Sql2008 ============== -->
+    <UsingTask AssemblyFile="$(ExtensionTasksPath)\MSBuild.ExtensionPack.Sql2008.dll" TaskName="MSBuild.ExtensionPack.Sql2008.Database"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksPath)\MSBuild.ExtensionPack.Sql2008.dll" TaskName="MSBuild.ExtensionPack.Sql2008.Server"/>
+
+
+    <!-- ============== Sync ============== -->
+    <UsingTask AssemblyFile="$(ExtensionTasksPath)\MSBuild.ExtensionPack.Sync.dll" TaskName="MSBuild.ExtensionPack.FileSystem.Sync"/>
+
+
+    <!-- ============== Tfs ============== -->
+    <UsingTask AssemblyFile="$(ExtensionTasksPath)\MSBuild.ExtensionPack.Tfs.dll" TaskName="MSBuild.ExtensionPack.Tfs.DevEnv"/>
+    <UsingTask AssemblyFile="$(ExtensionTasksPath)\MSBuild.ExtensionPack.Tfs.dll" TaskName="MSBuild.ExtensionPack.Tfs.TeamBuild"/>
+
+
+    <!-- ============== Windows Virtual PC ============== -->
+    <UsingTask AssemblyFile="$(ExtensionTasksPath)\MSBuild.ExtensionPack.WindowsVirtualPC.dll" TaskName="MSBuild.ExtensionPack.Virtualisation.VirtualPc"/>
+
+</Project>

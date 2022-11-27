@@ -1,0 +1,934 @@
+.CatHdrPanel
+{
+	background-image: url(images/core/hdrs/catalogueHdr.gif);
+	background-repeat: no-repeat;
+	height: 90px;
+	width: 770px;
+}
+.CatWrapper
+{
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	text-align: left;
+	width: 770px;
+}
+#CatFiltersWrapper
+{
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	width: 405px;
+	border-collapse: collapse;
+	border: 0;
+}
+
+.CatFiltersWrapper
+{
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	width: 405px;
+	border-collapse: collapse;
+	border: 0;
+}
+
+.CatFiltersColumn
+{
+	float: left;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	width: 133px;
+	border-collapse: collapse;
+	border: 0;
+}
+.CatNavPanel
+{
+	color: #D9D9DA;
+	margin-bottom: 2px;
+	width: 770px;
+}
+.CatSrcHdr
+{
+	background-color: #413189;
+	height: 20px;
+	width: 770px;
+}
+
+.CatAppHdr
+{
+	color: #413189;
+	font-size: 14px;
+	text-align: left;
+	text-transform: uppercase;
+	vertical-align: bottom;
+}
+
+.CatBkg
+{
+	background-image: url(images/core/bkgs/bkg.gif);
+	background-repeat: repeat-y;
+	border-bottom-color: #413189;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	width: 770px;
+}
+.CatSrcPanel
+{
+	background-image: url(images/core/bkgs/SrcBkg.gif);
+	background-repeat: repeat-y;
+	border-bottom-color: #EAEAEA;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	height: 32px;
+	width: 770px;
+}
+.CatSrcAllPanel
+{
+	background-image: url(images/core/bkgs/SrcBkg.gif);
+	background-repeat: repeat-y;
+	border-bottom-color: #EAEAEA;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	width: 770px;
+}
+.CatAppPanel
+{
+	background-image: url(images/core/bkgs/bkg.gif);
+	background-repeat: repeat-y;
+	border-bottom-color: #EAEAEA;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	height: 60px;
+	width: 770px;
+}
+.CatFtrPanel
+{
+	height: 40px;
+	width: 770px;
+}
+.CatAppFtr
+{
+	height: 25px;
+	width: 770px;
+}
+.CatHdrNav
+{
+	color: #D9D9DA;
+	float: right;
+}
+
+.CatTabPanel
+{
+	background:#413189;
+	color: #D9D9DA;
+	float: right;
+	height: 21px;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 10px;
+	padding: 0;
+}
+.CatTabLink
+{
+	background-image: url(images/tabs/tab0_L.gif);
+	background-position: left top;
+	background-repeat: no-repeat;
+	color: #FFF;
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	height: 21px;
+	margin: 0;
+	padding-bottom: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	text-align: center;
+	text-decoration: none;
+}
+.CatTabLinkOn
+{
+	background-image: url(images/tabs/tab1_L.gif);
+	background-position: left top;
+	background-repeat: no-repeat;
+	color: #413189;
+	display: block;
+	font-size: 12px;
+	font-weight: bold;
+	height: 21px;
+	margin: 0;
+	padding-bottom: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	text-align: center;
+	text-decoration: none;
+}
+.CatTab
+{
+	background-image: url(images/tabs/tab0_R.gif);
+	background-position: right top;
+	background-repeat: no-repeat;
+	color: #FFF;
+	float: left;
+	font-size: 12px;
+	font-weight: bold;
+	height: 21px;
+	list-style-image: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.CatTabOn
+{
+	background-image: url(images/tabs/tab1_R.gif);
+	background-position: right top;
+	background-repeat: no-repeat;
+	color: #413189;
+	float: left;
+	font-size: 12px;
+	font-weight: bold;
+	height: 21px;
+	list-style-image: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.SrcBkg
+{
+	background-image: url(images/core/bkgs/SrcGridbkg.gif);
+	background-repeat: repeat-y;
+	border-bottom-color: #413189;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	width: 770px;
+}
+.SrcHdrTxt
+{
+	color: #FFFFFF;
+	font-size: 12px;
+	margin-left: 5px;
+}
+.SrcHelpTxt
+{
+	color: #FFFFFF;
+	font-size: 11px;
+	margin-right: 5px;
+}
+.SrcLnk
+{
+	color: #FFFFFF;
+	font-size: 12px;
+}
+.SrcHdrMrg
+{
+	margin-top: 1px;
+}
+.SrcPanelMrg
+{
+	margin-left: 3px;
+	margin-right: 3px;
+	margin-top: 5px;
+}
+.SrcPanelControls
+{
+	margin-left: 3px;
+	margin-right: 3px;
+	margin-top: 5px;
+	vertical-align: middle;
+	width: 500px;
+}
+.SrcGridBkg
+{
+	background-image: url(images/core/bkgs/ImgBkg.gif);
+	background-repeat: no-repeat;
+	height: 240px;
+	text-align: center;
+	vertical-align: top;
+	width: 186px;
+}
+.SrcFltrBkg
+{
+	background-image: url(images/core/bkgs/SrcFltrBkg.gif);
+	background-repeat: no-repeat;
+	width: 135px;
+}
+.SrcFltrBkg2
+{
+	background-image: url(images/core/bkgs/SrcFltrBkg2.gif);
+	background-repeat: no-repeat;
+	width: 115px;
+}
+.SrcFltrMrg
+{
+	margin-top: 5px;
+}
+#SrcCatBkg
+{
+	background-color: #FFF;
+	border-bottom-color: #EAEAEA;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-left-color: #413189;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-color: #413189;
+	border-right-style: solid;
+	border-right-width: 1px;
+	width: 768px;
+}
+#SrcCatBkg ul
+{
+	margin-bottom: 5px;
+	margin-left: 10px;
+	margin-right: 0;
+	margin-top: 5px;
+	padding: 0;
+}
+#SrcCatBkg li
+{
+	list-style-position: inside;
+	list-style-type: disc;
+}
+.SrcCatMrg
+{
+	margin: 0;
+	padding: 3px;
+}
+
+
+.FltrPanelControls
+{
+	margin-bottom: 0;
+	margin-left: 3px;
+	margin-right: 3px;
+	margin-top: 5px;
+}
+.AppHdr
+{
+	margin-left: 10px;
+	margin-top: 10px;
+	text-align: left;
+}
+.AppPageView
+{
+	margin-right: 10px;
+	margin-top: 10px;
+	text-align: right;
+}
+.AppPaging
+{
+	margin-top: 5px;
+}
+.AppResults
+{
+	margin-left: 12px;
+	margin-top: 10px;
+}
+.ImgThbMrg
+{
+	margin: 20px 10px 10px;
+}
+.ImgThbOutline0
+{
+	border: 2px solid #D10B27;
+}
+.ImgThbOutline1
+{
+	border: 1px solid #000000;
+}
+.ImgIcons
+{
+	margin-top: 5px;
+}
+.LbxLeftPanel
+{
+	margin: 0;
+	width: 500px;
+}
+.LbxRightPanel
+{
+	margin: 0;
+	text-align: center;
+	width: 270px;
+}
+.LbxContent
+{
+	margin: 0;
+	width: 770px;
+}
+.LbxAppPanel
+{
+	background-image: url(images/core/bkgs/bkg.gif);
+	background-repeat: repeat-y;
+	height: 60px;
+	width: 770px;
+}
+.LbxCtrlPanel
+{
+	margin-bottom: 0;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 0;
+	text-align: center;
+	width: 250px;
+}
+.LbxCtrlHdr
+{
+	background-color: #413189;
+	height: 20px;
+	margin-bottom: 0;
+	margin-left: 3px;
+	margin-right: 3px;
+	margin-top: 0;
+	text-align: left;
+	width: 244px;
+}
+.LbxCtrlBkg
+{
+	background-image: url(images/core/bkgs/LbxCtrlBkg.gif);
+	background-repeat: repeat-y;
+	border-bottom-color: #413189;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	margin-bottom: 0;
+	margin-left: 3px;
+	margin-right: 3px;
+	margin-top: 0;
+	text-align: left;
+	width: 244px;
+}
+.LbxCtrlMrg
+{
+	margin: 0 10px 10px;
+}
+
+
+.CtrlHdrMrg
+{
+	margin-top: 3px;
+}
+.CtrlHdrTxt
+{
+	color: #FFFFFF;
+	font-size: 12px;
+	margin-left: 5px;
+}
+.CtrlHelpTxt
+{
+	color: #FFFFFF;
+	display: none;
+	font-size: 11px;
+	margin-right: 5px;
+}
+.LbxNotesPanel
+{
+	background-color: #F5F4F0;
+	background-image: url(images/core/bkgs/LbxNotesBkg.gif);
+	background-repeat: repeat-y;
+	border-bottom-color: #EAEAEA;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-left-style: none;
+	border-right-style: none;
+	border-top-color: #EAEAEA;
+	border-top-style: solid;
+	border-top-width: 1px;
+	width: 500px;
+}
+.NotesMrg
+{
+	margin-bottom: 5px;
+	margin-left: 10px;
+	margin-right: 5px;
+	margin-top: 5px;
+}
+.EditMrg
+{
+	margin-bottom: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+.LbxResultsPanel
+{
+	margin-bottom: 10px;
+	margin-left: 20px;
+	margin-right: 0;
+	margin-top: 5px;
+	text-align: left;
+	width: 480px;
+}
+.LbxResultsFtr
+{
+	background-image: url(images/core/bkgs/FtrBkg.gif);
+	height: 5px;
+	width: 480px;
+}
+.LbxResultsHdr
+{
+	height: 2px;
+	width: 480px;
+}
+.LbxThbPanel
+{
+	margin: 0;
+	text-align: center;
+	width: 120px;
+}
+.LbxThbMrg
+{
+	margin: 10px 0 0;
+}
+.LbxCtrlFtr
+{
+	background-image: url(images/core/bkgs/LbxCtrlFtr.gif);
+	background-repeat: no-repeat;
+	margin-bottom: 20px;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
+	text-align: left;
+	width: 224px;
+}
+.CntPanel
+{
+	width: 770px;
+}
+.CntBkg
+{
+	background-image: url(images/core/bkgs/SrcGridbkg.gif);
+	background-repeat: repeat-y;
+	border-bottom-color: #413189;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-top-color: #413189;
+	border-top-style: solid;
+	border-top-width: 1px;
+	width: 770px;
+}
+.CntHdr
+{
+	background-image: url(images/core/bkgs/bkg.gif);
+	background-repeat: repeat-y;
+	border-bottom-color: #EAEAEA;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	width: 770px;
+}
+.CntMrg
+{
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 0;
+	text-align: left;
+}
+.CntFtr
+{
+	text-align: right;
+	width: 770px;
+}
+.CntThbMrg
+{
+	margin: 5px 10px 0;
+}
+
+
+.DManAppPanel
+{
+	background-image: url(images/core/bkgs/bkg.gif);
+	background-repeat: repeat-y;
+	border-bottom-color: #EAEAEA;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	width: 770px;
+}
+.DMHdr
+{
+	height: 20px;
+	margin-bottom: 0;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 0;
+	width: 750px;
+}
+.DMHdrSelector
+{
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	width: 750px;
+}
+.DMHdrFtr
+{
+	height: 20px;
+	margin-bottom: 0;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	width: 750px;
+}
+.DMViewSelector
+{
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+.DMMrg
+{
+	margin-bottom: 10px;
+	margin-left: 20px;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+.OrdMrg
+{
+	margin-bottom: 10px;
+	margin-left: 20px;
+	margin-right: 10px;
+	margin-top: 10px;
+}
+.OrdHdr
+{
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 0;
+	width: 750px;
+}
+.OrdPanel
+{
+	margin-bottom: 0;
+	margin-left: 10px;
+	margin-right: 0;
+	margin-top: 0;
+	width: 750px;
+}
+.OrdThbPanel
+{
+	margin: 0;
+	text-align: center;
+	width: 120px;
+}
+.OrdTblPanel
+{
+	margin: 0;
+	width: 430px;
+}
+.OrdFtr
+{
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 0;
+	width: 750px;
+}
+.OrdAppPanel
+{
+	margin: 0;
+	text-align: right;
+	width: 180px;
+}
+.OrdResultsFtr
+{
+	background-image: url(images/core/bkgs/FtrBkg.gif);
+	height: 5px;
+	margin-bottom: 0;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 0;
+	width: 750px;
+}
+.OrdThbMrg
+{
+	margin: 0 0 0 15px;
+}
+.OrdFbkPanel
+{
+	margin-bottom: 0;
+	margin-left: 15px;
+	margin-right: 0;
+	margin-top: 0;
+	text-align: left;
+	width: 165px;
+}
+.OrdProcess
+{
+	border-top-color: #EAEAEA;
+	border-top-style: solid;
+	border-top-width: 1px;
+	margin-bottom: 0;
+	margin-left: 10px;
+	margin-right: 0;
+	margin-top: 10px;
+	text-align: center;
+	width: 750px;
+}
+
+
+.DetailsHdrPanel
+{
+	background-image: url(images/core/hdrs/detailsHdr.gif);
+	background-repeat: no-repeat;
+	height: 70px;
+	width: 700px;
+}
+.DetailsWrapper
+{
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	text-align: left;
+	width: 700px;
+}
+.DetailsThbPanel
+{
+	background-color: #FFFFFF;
+	border: 1px solid #EAEAEA;
+	/*height: 470px;*/
+	width: 360px;
+}
+.DetailsThbMrg
+{
+	margin-bottom: 2px;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 15px;
+}
+.DetailsTxtMrg
+{
+	margin-bottom: 5px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+.DNoteBkg
+{
+	background-color: #F5F4F0;
+	border-left-color: #413189;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-color: #413189;
+	border-right-style: solid;
+	border-right-width: 1px;
+	width: 768px;
+}
+.DNotePanel
+{
+	color: #000000;
+	font-size: 11px;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 200px;
+}
+
+.DNoteHdr
+{
+	color: #000000;
+	font-size: 14px;
+	text-align: left;
+	text-transform: uppercase;
+	vertical-align: bottom;
+}
+.DNoteMrg
+{
+	margin-right: 10px;
+}
+.H5
+{
+	height: 5px;
+}
+.H10
+{
+	height: 10px;
+}
+.H20
+{
+	height: 20px;
+}
+.H15
+{
+	height: 15px;
+}
+.H155
+{
+	height: 155px;
+}
+.H225
+{
+	height: 225px;
+}
+.W700
+{
+	width: 700px;
+}
+.W550
+{
+	width: 550px;
+}
+.W520
+{
+	width: 520px;
+}
+.W500
+{
+	width: 500px;
+}
+.W480
+{
+	width: 480px;
+}
+.W470
+{
+	width: 470px;
+}
+.W450
+{
+	width: 450px;
+}
+.W420
+{
+	width: 420px;
+}
+.W410
+{
+	width: 410px;
+}
+.W350
+{
+	width: 350px;
+}
+.W310
+{
+	width: 310px;
+}
+.W300
+{
+	width: 300px;
+}
+.W280
+{
+	width: 280px;
+}
+.W260
+{
+	width: 260px;
+}
+.W244
+{
+	width: 244px;
+}
+.W220
+{
+	width: 220px;
+}
+.W225
+{
+	width: 225px;
+}
+.W200
+{
+	width: 200px;
+}
+.W180
+{
+	width: 180px;
+}
+.W170
+{
+	width: 170px;
+}
+.W150
+{
+	width: 150px;
+}
+.W140
+{
+	width: 140px;
+}
+.W130
+{
+	width: 130px;
+}
+.W125
+{
+	width: 125px;
+}
+.W120
+{
+	width: 120px;
+}
+.W110
+{
+	width: 110px;
+}
+.W100
+{
+	width: 100px;
+}
+.W80
+{
+	width: 80px;
+}
+.W75
+{
+	width: 75px;
+}
+.W67
+{
+	width: 67px;
+}
+.W50
+{
+	width: 50px;
+}
+.noResults
+{
+	height: 300px;
+}
+.AccCtrlPanel
+{
+	margin-bottom: 0;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 0;
+	text-align: center;
+}
+.AccCtrlHdr
+{
+	background-color: #413189;
+	height: 20px;
+	margin-bottom: 0;
+	margin-left: 3px;
+	margin-right: 3px;
+	margin-top: 0;
+	text-align: left;
+}
+.AccCtrlBkg
+{
+	background-image: url(images/core/bkgs/AccCtrlBkg.gif);
+	background-repeat: repeat-y;
+	border-bottom-color: #413189;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	margin-bottom: 0;
+	margin-left: 3px;
+	margin-right: 3px;
+	margin-top: 0;
+	text-align: left;
+	width: 470px;
+}
+.FtrHelpTxt
+{
+}
+.InlineHelpTxt
+{
+	color: #000000;
+	display: none;
+	font-size: 11px;
+}

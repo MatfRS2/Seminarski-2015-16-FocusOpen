@@ -1,0 +1,79 @@
+.ExtWrapper
+{
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 80px;
+	text-align: left;
+	width: 520px;
+}
+.ExtHdrPanel
+{
+	background-image: url(images/core/hdrs/externalHdr.gif);
+	background-repeat: no-repeat;
+	height: 68px;
+	margin: 0;
+	width: 520px;
+}
+.ExtHeadline
+{
+	background-image: url(images/core/bkgs/FtrBkg.gif);
+	background-repeat: no-repeat;
+	height: 1px;
+	margin: 0;
+	width: 520px;
+}
+.ExtBkg
+{
+	background-image: url(images/core/bkgs/ExtBkg.gif);
+	background-repeat: repeat-y;
+	border-bottom-color: #425969;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-top-color: #425969;
+	border-top-style: solid;
+	border-top-width: 1px;
+	margin: 0;
+	width: 520px;
+}
+.ExtMrg
+{
+	margin: 10px;
+	width: 500px;
+}
+.ExtTblMrg
+{
+	margin-bottom: 10px;
+	margin-left: 40px;
+	margin-right: 40px;
+	margin-top: 0;
+	width: 420px;
+}
+.ExtSubCkMrg
+{
+	margin-bottom: 0;
+	margin-left: 105px;
+	margin-right: 0;
+	margin-top: 5px;
+}
+.ExtDiv
+{
+	border-top-color: #EAEAEA;
+	border-top-style: solid;
+	border-top-width: 1px;
+	margin: 5px 0 0;
+	width: 500px;
+}
+.RegWrapper
+{
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	text-align: left;
+	width: 520px;
+}
+.RegFbk
+{
+	height: 200px;
+}

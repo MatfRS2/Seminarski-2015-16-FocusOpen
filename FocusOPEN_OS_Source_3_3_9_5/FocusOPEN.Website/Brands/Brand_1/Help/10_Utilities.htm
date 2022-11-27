@@ -1,0 +1,138 @@
+<html>
+<head>
+<title>Utilities: FocusOPEN Digital Asset Manager Admin Guide</title>
+<script type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="help.css">
+</head>
+
+
+<body>
+<div><img src="images/helpHdr.gif" width="479" height="68"></div>
+<a name="sub_menu10"></a>
+<div class="Hdr"><H1>Utilities</H1></div>
+<div class="Bck">[<a href="index.htm#admin">main menu</a> | <a href="#" onClick="self.close()">close</a> | <a href="#" onClick="window.print()">print this section</a>]</div>
+<div class="Cnt">
+General Utilities
+<ul>
+<li><a href="#configure_metadata">Configure Metadata</a></li>
+<li><a href="#manage_file_paths">Manage File Paths</a></li>
+</ul>
+Diagnostic Tools
+<ul>
+<li><a href="#view_settings">View Settings</a></li>
+<li><a href="#view_logs">View Logs</a></li>
+<li><a href="#view_mime_types">View Mime Types</a></li>
+<li><a href="#drive_info">Drive Info</a></li>
+<li><a href="#asset_processing_server_info">Asset Processing Server Info</a></li>
+</ul>
+</div>
+<div class="HozLine"></div>
+
+
+<br /><br />
+<a name="configure_metadata"></a>
+<div class="Hdr"><H2>Configure Metadata</H2></div>
+<div class="Bck"><span class="Permissions">Available to: Super Admin Only</span><br />
+[<a href="#sub_menu10">top ^</a> | <a href="#" onClick="self.close()">close</a>]</div>
+<div class="Cnt">
+  <p>This enables Super Administrators to enable/disable metadata fields, specify if they are required or not, whether they appear in the asset detail view and change the field names.  If more than one brand is provided, the user must choose which brand they want to customise.  Each brand can have a unique set of metadata.</p>
+
+<span class="Bold">To Configure Metadata</span> 
+<ul>
+  <li>Select Admin > Utilities > Configure Metadata</li>
+  <li>The field column shows the name of the metadata field.  Click rename to change the name of the field.</li>
+  <li>The description tells you what type of metadata the field is.</li>
+  <li>Catalogue decides whether an item of metadata will be shown in the catalogue area.  Some items are either N/A (i.e. they are system generated and always shown) or disabled because they must be specified for every asset.</li>
+  <li>Required specifies whether the a given field is mandatory or not (this is ignored if the field has not been specified as appearing in the catalogue).</li>
+  <li>Display in Asset Detail determines whether the field is shown in the asset detail pop-up window when the user clicks on a search result in the catalogue.</li>
+  <li>Additional copy allows some extra text to be added to the field name (when editing asset metadata).</li>
+  <li>Tooltip appears when the user is edited the metadata field and allows extra explanatory text to be specified.</li>
+  <li>Hide filter search will suppress the filter (advanced search) options from the catalogue.</li>
+  <li>Hide category search removes the category search from the catalogue.</li>
+</ul>
+Click save to apply the metadata changes. <br><br>	
+
+</div>
+
+<div class="Ftr">this section: <a href="#sub_menu10" title="Click here to view menu options for this section">Utilities</a> | <a href = "index.htm#admin" title="Click here to view all sections in this user guide">main menu</a> | <a href="#" onClick="history.back()">back</a></div>
+
+<div class="HozLine"></div>
+
+<br /><br />
+<a name="manage_file_paths"></a>
+<div class="Hdr"><H2>Manage File Paths</H2></div>
+<div class="Bck"><span class="Permissions">Available to: Super Admin Only</span><br />
+[<a href="#sub_menu10">top ^</a> | <a href="#" onClick="self.close()">close</a>]</div>
+<div class="Cnt">
+  <p>Manage file paths enables multiple storage points to be set up and an active one to be specified.  Each asset is linked to a file path and as one storage facility runs out of space, it is possible to add more and make the new location the default while the existing file path continues to remain active for existing assets.  This section is generally only used by engineers.</p>
+</div>
+
+<div class="Ftr">this section: <a href="#sub_menu10" title="Click here to view menu options for this section">Utilities</a> | <a href = "index.htm#admin" title="Click here to view all sections in this user guide">main menu</a> | <a href="#" onClick="history.back()">back</a></div>
+
+<div class="HozLine"></div>
+
+<br /><br />
+<a name="view_settings"></a>
+<div class="Hdr"><H2>View Settings</H2></div>
+<div class="Bck"><span class="Permissions">Available to: Super Admin Only</span><br />
+[<a href="#sub_menu10">top ^</a> | <a href="#" onClick="self.close()">close</a>]</div>
+<div class="Cnt">
+<p>Shows the key system settings currently active.  This section is generally only used by engineers.</p>
+</div>
+
+<div class="Ftr">this section: <a href="#sub_menu10" title="Click here to view menu options for this section">Utilities</a> | <a href = "index.htm#admin" title="Click here to view all sections in this user guide">main menu</a> | <a href="#" onClick="history.back()">back</a></div>
+
+<div class="HozLine"></div>
+
+<br /><br />
+<a name="view_logs"></a>
+<div class="Hdr"><H2>View Logs</H2></div>
+<div class="Bck"><span class="Permissions">Available to: Super Admin Only</span><br />
+[<a href="#sub_menu10">top ^</a> | <a href="#" onClick="self.close()">close</a>]</div>
+<div class="Cnt">
+<p>Enables the application logs to be read from within the FocusOPEN web application.  This section is generally only used by engineers.</p>
+</div>
+
+<div class="Ftr">this section: <a href="#sub_menu10" title="Click here to view menu options for this section">Utilities</a> | <a href = "index.htm#admin" title="Click here to view all sections in this user guide">main menu</a> | <a href="#" onClick="history.back()">back</a></div>
+
+<div class="HozLine"></div>
+
+<br /><br />
+<a name="drive_info"></a>
+<div class="Hdr"><H2>Drive Info</H2></div>
+<div class="Bck"><span class="Permissions">Available to: Super Admin Only</span><br />
+[<a href="#sub_menu10">top ^</a> | <a href="#" onClick="self.close()">close</a>]</div>
+<div class="Cnt">
+<p>Gives an at a glance view of disk utilisation (providing it has been configured for all file paths).  This section is generally only used by engineers.</p>
+</div>
+
+<div class="Ftr">this section: <a href="#sub_menu10" title="Click here to view menu options for this section">Utilities</a> | <a href = "index.htm#admin" title="Click here to view all sections in this user guide">main menu</a> | <a href="#" onClick="history.back()">back</a></div>
+
+<div class="HozLine"></div>
+
+
+<br /><br />
+<a name="asset_processing_server_info"></a>
+<div class="Hdr"><H2>Asset Processing Server Info</H2></div>
+<div class="Bck"><span class="Permissions">Available to: Super Admin Only</span><br />
+[<a href="#sub_menu10">top ^</a> | <a href="#" onClick="self.close()">close</a>]</div>
+<div class="Cnt">
+<p>Shows some basic details about the location of the asset processing server such as the number of active jobs, up-time and supported extensions.  This section is generally only used by engineers.</p>
+</div>
+
+<div class="Ftr">this section: <a href="#sub_menu10" title="Click here to view menu options for this section">Utilities</a> | <a href = "index.htm#admin" title="Click here to view all sections in this user guide">main menu</a> | <a href="#" onClick="history.back()">back</a></div>
+
+<div class="HozLine"></div>
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</body>
+</html>
+

@@ -1,0 +1,15 @@
+C:\ProjectsVS\OpenSource\FocusOpen\FocusOPEN_OS_Source_3_3_9_5\FocusOPEN.Business\bin\Debug\FocusOPEN.Business.dll.config
+C:\ProjectsVS\OpenSource\FocusOpen\FocusOPEN_OS_Source_3_3_9_5\FocusOPEN.Business\bin\Debug\FocusOPEN.Business.dll
+C:\ProjectsVS\OpenSource\FocusOpen\FocusOPEN_OS_Source_3_3_9_5\FocusOPEN.Business\bin\Debug\FocusOPEN.Business.pdb
+C:\ProjectsVS\OpenSource\FocusOpen\FocusOPEN_OS_Source_3_3_9_5\FocusOPEN.Business\bin\Debug\Antlr3.Runtime.dll
+C:\ProjectsVS\OpenSource\FocusOpen\FocusOPEN_OS_Source_3_3_9_5\FocusOPEN.Business\bin\Debug\FocusOPEN.Data.dll
+C:\ProjectsVS\OpenSource\FocusOpen\FocusOPEN_OS_Source_3_3_9_5\FocusOPEN.Business\bin\Debug\FocusOPEN.Shared.dll
+C:\ProjectsVS\OpenSource\FocusOpen\FocusOPEN_OS_Source_3_3_9_5\FocusOPEN.Business\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\ProjectsVS\OpenSource\FocusOpen\FocusOPEN_OS_Source_3_3_9_5\FocusOPEN.Business\bin\Debug\Jint.dll
+C:\ProjectsVS\OpenSource\FocusOpen\FocusOPEN_OS_Source_3_3_9_5\FocusOPEN.Business\bin\Debug\log4net.dll
+C:\ProjectsVS\OpenSource\FocusOpen\FocusOPEN_OS_Source_3_3_9_5\FocusOPEN.Business\bin\Debug\log4net.xml
+C:\ProjectsVS\OpenSource\FocusOpen\FocusOPEN_OS_Source_3_3_9_5\FocusOPEN.Business\bin\Debug\FocusOPEN.Shared.pdb
+C:\ProjectsVS\OpenSource\FocusOpen\FocusOPEN_OS_Source_3_3_9_5\FocusOPEN.Business\bin\Debug\FocusOPEN.Data.pdb
+C:\ProjectsVS\OpenSource\FocusOpen\FocusOPEN_OS_Source_3_3_9_5\FocusOPEN.Business\obj\Debug\ResolveAssemblyReference.cache
+C:\ProjectsVS\OpenSource\FocusOpen\FocusOPEN_OS_Source_3_3_9_5\FocusOPEN.Business\obj\Debug\FocusOPEN.Business.dll
+C:\ProjectsVS\OpenSource\FocusOpen\FocusOPEN_OS_Source_3_3_9_5\FocusOPEN.Business\obj\Debug\FocusOPEN.Business.pdb

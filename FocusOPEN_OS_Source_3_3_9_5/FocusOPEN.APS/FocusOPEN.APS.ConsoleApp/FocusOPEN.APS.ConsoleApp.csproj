@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{14E587A1-5420-4C1F-9A78-DE8C04CB202E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FocusOPEN.APS.ConsoleApp</RootNamespace>
+    <AssemblyName>FocusOPEN.APS.ConsoleApp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\AssemblyInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FocusOPEN.APS\FocusOPEN.APS.csproj">
+      <Project>{A15299C6-C7C1-4FF0-8E40-449827A923C6}</Project>
+      <Name>FocusOPEN.APS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\Dependencies\Targets\CommunityTasks\MSBuild.Community.Tasks.Targets" />
+  <Import Project="..\Dependencies\Targets\ExtensionPack\MSBuild.ExtensionPack.tasks" />
+  <Target Name="CleanFolders">
+    <RemoveDir Directories=".\\TempBuildDir" Condition="Exists('.\\TempBuildDir')" />
+    <RemoveDir Directories=".\\Debug" Condition="Exists('.\\Debug')" />
+    <RemoveDir Directories=".\\Release" Condition="Exists('.\\Release')" />
+    <Message Text="Cleaned old build folders" />
+  </Target>
+  <Target Name="BeforeBuild">
+    <CallTarget Targets="CleanFolders" />
+    <ItemGroup>
+      <AssemblyInfoFiles Include="$(ProjectDir)Properties\AssemblyInfo.cs" />
+    </ItemGroup>
+    <MSBuild.ExtensionPack.Framework.AssemblyInfo AssemblyInfoFiles="@(AssemblyInfoFiles)" AssemblyBuildNumberType="YearWeekDay" FirstDayOfWeek="Monday" AssemblyRevisionType="AutoIncrement" AssemblyRevisionFormat="0" />
+  </Target>
+  <Target Name="AfterBuild">
+    <ItemGroup>
+      <ConfigFiles Include="..\FocusOPEN.APS\Config\*.*" />
+      <SourceAppConfig Include="..\FocusOPEN.APS\App.config" />
+      <DestinationAppConfig Include="$(TargetDir)$(TargetFileName).config" />
+      <ReferencedAssemblies Include="..\FocusOPEN.APS\$(OutputPath)*.dll" />
+      <SQLiteAssembly Include="..\..\Dependencies\SQLite\$(Platform)\System.Data.SQLite.DLL" />
+    </ItemGroup>
+    <RemoveDir Directories="$(TargetDir)obj" Condition="Exists('$(TargetDir)obj')" />
+    <RemoveDir Directories="$(TargetDir)Properties" Condition="Exists('$(TargetDir)Properties')" />
+    <RemoveDir Directories="$(TargetDir)Components" Condition="Exists('$(TargetDir)Components')" />
+    <MakeDir Directories="$(TargetDir)Logs" Condition="!Exists('$(TargetDir)Logs')" />
+    <MakeDir Directories="$(TargetDir)Config" Condition="!Exists('$(TargetDir)Config')" />
+    <Copy SourceFiles="@(ConfigFiles)" DestinationFolder="$(TargetDir)Config\" />
+    <Copy SourceFiles="@(SourceAppConfig)" DestinationFiles="@(DestinationAppConfig)" />
+    <Copy SourceFiles="@(ReferencedAssemblies)" DestinationFolder="$(TargetDir)" />
+    <Copy SourceFiles="@(SQLiteAssembly)" DestinationFolder="$(TargetDir)" />
+  </Target>
+</Project>

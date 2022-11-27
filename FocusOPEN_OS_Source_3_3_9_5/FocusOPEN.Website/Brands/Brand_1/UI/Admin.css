@@ -1,0 +1,263 @@
+.AdmWrapper
+{
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	text-align: left;
+	width: 930px;
+}
+.AdmBkg
+{
+	background-image: url(images/core/bkgs/AdmBkg.gif);
+	background-repeat: repeat-y;
+	border-bottom-color: #413189;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	width: 930px;
+}
+.AdmHdrPanel
+{
+	background-image: url(images/core/hdrs/AdminHdr.gif);
+	background-repeat: no-repeat;
+	height: 90px;
+	width: 930px;
+}
+.AdmNavPanel
+{
+	color: #D9D9DA;
+	margin-bottom: 2px;
+	width: 930px;
+}
+.AdmFtrPanel
+{
+	background-color: #fff;
+	color: #000;
+	height: 40px;
+	width: 930px;
+}
+.AdmHdr
+{
+	background-color: #413189;
+	height: 20px;
+	width: 930px;
+}
+.AdmHdrMrg
+{
+	margin-top: 3px;
+}
+.AdmHdrTxt
+{
+	color: #FFFFFF;
+	font-size: 12px;
+	margin-left: 5px;
+}
+.AdmHelpTxt
+{
+	color: #FFFFFF;
+	display: none;
+	font-size: 11px;
+	margin-right: 5px;
+}
+.AdmAppHdr
+{
+	color: #413189;
+	font-size: 14px;
+	margin-left: 10px;
+	margin-top: 20px;
+	text-align: left;
+	text-transform: uppercase;
+}
+.AdmLeftPanel
+{
+	width: 540px;
+}
+.AdmRightPanel
+{
+	width: 380px;
+}
+.AdmTblPanel
+{
+	width: 930px;
+}
+.AppCtrlMrg
+{
+	margin-left: 10px;
+}
+.AppCtrlPanel
+{
+	border: 1px solid #EAEAEA;
+	padding: 10px;
+}
+.AdmSubCkMrg
+{
+	margin-left: 80px;
+}
+.AppTblMrg
+{
+	margin-left: 10px;
+}
+.AdmAppFtr
+{
+	height: 25px;
+	width: 930px;
+}
+.noResultsAdm
+{
+	height: 200px;
+}
+.HozLine
+{
+	border-top-color: #EAEAEA;
+	border-top-style: solid;
+	border-top-width: 1px;
+	height: 5px;
+	margin-top: 5px;
+	width: 470px;
+}
+.TblCell3
+{
+	background-color: #413189;
+	border-bottom-color: #EAEAEA;
+	border-bottom-style: none;
+	border-bottom-width: 1px;
+	border-left-color: #EAEAEA;
+	border-left-style: none;
+	border-left-width: 1px;
+	border-right-color: #EAEAEA;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-top-color: #EAEAEA;
+	border-top-style: solid;
+	border-top-width: 1px;
+}
+.CatSubCkMrg
+{
+	margin-left: 132px;
+}
+.CatHozLine
+{
+	border-top-color: #EAEAEA;
+	border-top-style: solid;
+	border-top-width: 1px;
+	height: 5px;
+	margin-top: 5px;
+	width: 550px;
+}
+.UpdSubCkMrg
+{
+	margin-left: 102px;
+}
+.AdmOrdNotesPanel
+{
+	background-color: #F5F4F0;
+	background-image: url(images/core/bkgs/AdmOrdNotesBkg.gif);
+	background-repeat: repeat-y;
+	border-bottom-color: #EAEAEA;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-left-style: none;
+	border-right-style: none;
+	border-top-color: #EAEAEA;
+	border-top-style: solid;
+	border-top-width: 1px;
+	width: 600px;
+}
+.AdmOrdBkg
+{
+	width: 600px;
+}
+.AdmOrdThbMrg
+{
+	margin: 10px 0 0 10px;
+}
+.AdmOrdThbPanel
+{
+	margin: 0;
+	text-align: center;
+	width: 120px;
+}
+.AdmOrdResultsFtr
+{
+	background-image: url(images/core/bkgs/FtrBkg.gif);
+	height: 5px;
+	margin-bottom: 0;
+	margin-left: 10px;
+	margin-right: 0;
+	margin-top: 0;
+	width: 590px;
+}
+.ReplaceHdrPanel
+{
+	background-image: url(images/headers/admin/replace_file.gif);
+	background-repeat: no-repeat;
+	height: 60px;
+	width: 670px;
+}
+.ReplaceWrapper
+{
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	text-align: left;
+	width: 670px;
+}
+.AdmHomeMrg
+{
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 0;
+}
+.ChartWrapper
+{
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	text-align: left;
+	width: 600px;
+}
+.ChartHdrPanel
+{
+	background-image: url(images/headers/admin/chart.gif);
+	background-repeat: no-repeat;
+	height: 60px;
+	width: 600px;
+}
+.ChartPanel
+{
+	background-color: #FFFFFF;
+	border: 1px solid #EAEAEA;
+	height: 400px;
+	width: 600px;
+}
+.ChartMrg
+{
+	margin-right: 20px;
+}
+
+#theUl li {
+    
+    list-style: none;
+    margin: 0px 0px 5px 0px;
+    padding: 5px 0px 5px 0px;
+    display: inline; 
+}
+#theUl {
+    
+    margin: 0;
+    padding: 0;
+}
+
+#theUl table
+{
+	border: 0; 
+	border-collapse:collapse;
+	border-spacing: 0;
+}
+
+#theUl table td { 
+    padding: 2; 
+}

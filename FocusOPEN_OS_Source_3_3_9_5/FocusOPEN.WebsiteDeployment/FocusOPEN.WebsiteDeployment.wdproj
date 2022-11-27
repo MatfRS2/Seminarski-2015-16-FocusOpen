@@ -1,0 +1,142 @@
+﻿<Project
+	xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
+	ToolsVersion="3.5"
+	InitialTargets="SetupMessage"
+	DefaultTargets="Build">
+
+
+	<PropertyGroup>
+		<Configuration Condition="'$(Configuration)'=='' ">Debug</Configuration>
+		<Platform Condition="'$(Platform)'==''">AnyCPU</Platform>
+		<ProductVersion>9.0.21022</ProductVersion>
+		<SchemaVersion>2.0</SchemaVersion>
+		<ProjectGuid>{C0F1475F-BFC8-4848-A431-40F00E410CA4}</ProjectGuid>
+		<SourceWebPhysicalPath>..\FocusOPEN.Website</SourceWebPhysicalPath>
+		<SourceWebProject>{5E484D60-EF25-413C-8EAD-AB89886DD4A8}|..\FocusOPEN.Website\FocusOPEN.Website.csproj</SourceWebProject>
+		<SourceWebVirtualPath>/FocusOPEN.Website.csproj</SourceWebVirtualPath>
+	</PropertyGroup>
+
+
+	<PropertyGroup Condition="'$(Configuration)'=='Debug'">
+		<DebugSymbols>true</DebugSymbols>
+		<OutputPath>.\Debug</OutputPath>
+		<EnableUpdateable>true</EnableUpdateable>
+		<UseMerge>true</UseMerge>
+		<SingleAssemblyName>FocusOPEN.WebsiteDeployment</SingleAssemblyName>
+		<DeleteAppCodeCompiledFiles>true</DeleteAppCodeCompiledFiles>
+		<UseWebConfigReplacement>false</UseWebConfigReplacement>
+	</PropertyGroup>
+
+
+	<PropertyGroup Condition="'$(Configuration)'=='Release'">
+		<DebugSymbols>false</DebugSymbols>
+		<OutputPath>.\Release</OutputPath>
+		<EnableUpdateable>true</EnableUpdateable>
+		<UseMerge>true</UseMerge>
+		<SingleAssemblyName>FocusOPEN.WebsiteDeployment</SingleAssemblyName>
+	</PropertyGroup>
+
+
+	<PropertyGroup Condition="'$(Configuration)'=='Deploy'">
+		<DebugSymbols>false</DebugSymbols>
+		<DebugType>None</DebugType>
+		<OutputPath>.\Release</OutputPath>
+		<EnableUpdateable>true</EnableUpdateable>
+		<UseMerge>true</UseMerge>
+		<SingleAssemblyName>FocusOPEN.WebsiteDeployment</SingleAssemblyName>
+	</PropertyGroup>
+
+
+	<Import Project="..\Dependencies\Targets\WebDeployment\Microsoft.WebDeployment.targets" />
+	<Import Project="..\Dependencies\Targets\CommunityTasks\MSBuild.Community.Tasks.Targets" />
+	<Import Project="..\Dependencies\Targets\ExtensionPack\MSBuild.ExtensionPack.tasks" />
+
+
+	<Target Name="SetupMessage">
+		<Message Text="Building Configuration: $(Configuration) ..." />
+	</Target>
+
+
+	<Target Name="CleanFolders">
+		<RemoveDir Directories=".\\TempBuildDir" Condition="Exists('.\\TempBuildDir')" />
+		<RemoveDir Directories=".\\Debug" Condition="Exists('.\\Debug')" />
+		<RemoveDir Directories=".\\Release" Condition="Exists('.\\Release')" />
+		<Message Text="Cleaned old build folders" />
+	</Target>
+
+
+	<Target Name="UpdateAssemblyVersion">
+		<ItemGroup>
+			<AssemblyInfoFiles Include="..\FocusOPEN.Business\Properties\AssemblyInfo.cs" />
+			<AssemblyInfoFiles Include="..\FocusOPEN.Data\Properties\AssemblyInfo.cs" />
+			<AssemblyInfoFiles Include="..\FocusOPEN.Shared\Properties\AssemblyInfo.cs" />
+			<AssemblyInfoFiles Include="..\FocusOPEN.Website\Properties\AssemblyInfo.cs" />
+		</ItemGroup>
+		<MSBuild.ExtensionPack.Framework.AssemblyInfo
+			
+			AssemblyInfoFiles="@(AssemblyInfoFiles)"
+			AssemblyMajorVersion="3"
+			AssemblyMinorVersion="3"
+			AssemblyBuildNumber="9"
+			AssemblyRevision="5"
+			
+			AssemblyFileMajorVersion="3"
+			AssemblyFileMinorVersion="3"
+			AssemblyFileBuildNumber="9"
+			AssemblyFileRevision="5"
+		/>
+		<Message Text="Updated assembly version number" />
+	</Target>
+
+
+	<Target Name="BeforeBuild">
+		<CallTarget Targets="CleanFolders" />
+		<CallTarget Targets="UpdateAssemblyVersion" />
+	</Target>
+
+
+	<Target Name="AfterBuild">
+		<!--Remove folders-->
+		<RemoveDir Directories="$(OutputPath)\obj" Condition="Exists('$(OutputPath)\obj')" />
+		<RemoveDir Directories="$(OutputPath)\Properties" Condition="Exists('$(OutputPath)\Properties')" />
+		<RemoveDir Directories="$(OutputPath)\Components" Condition="Exists('$(OutputPath)\Components')" />
+		<RemoveDir Directories="$(OutputPath)\Controls\\Compiled" Condition="Exists('$(OutputPath)\Controls\\Compiled')" />
+		<Message Text="Removed folders from from output path" />
+		<!--Delete Files-->
+		<Delete Files="$(OutputPath)\@Touch.bat" />
+		<Delete Files="$(OutputPath)\FocusOPEN.Website.csproj" />
+		<Delete Files="$(OutputPath)\FocusOPEN.Website.csproj.user" />
+		<Delete Files="$(OutputPath)\App_Data\\ElmahErrorDb.db" />
+		<Message Text="Removed files that are not required from from output path" />
+		<!--Compress Javascript-->
+		<JSCompress Files="$(OutputPath)\Includes\\Javascript\\Global.js" />
+		<JSCompress Files="$(OutputPath)\Includes\\Javascript\\Admin.js" />
+		<Message Text="Compressed javascript" />
+		<!--Clean project for deployment-->
+		<CallTarget Targets="CleanForDeployment" />
+		<!--Get date-->
+		<Time Format="yyyyMMdd">
+			<Output TaskParameter="FormattedTime" PropertyName="BuildDate" />
+		</Time>
+		<!--Setup files to be included in zip-->
+		<ItemGroup>
+			<ZipFiles Include="$(OutputPath)\**\*.*" /> 
+		</ItemGroup>
+		<!--Set zip filename-->
+		<PropertyGroup>
+			<ZipFileName>.\\FocusOPEN_Build_$(Configuration)_$(BuildDate).zip</ZipFileName>
+		</PropertyGroup>
+		<!--Zip files-->
+		<MSBuild.Community.Tasks.Zip Files="@(ZipFiles)" WorkingDirectory="$(OutputPath)" ZipFileName="$(ZipFileName)" ZipLevel="9" />
+		<!--Clean up folders-->
+		<CallTarget Targets="CleanFolders" />
+	</Target>
+
+
+	<Target Name="CleanForDeployment" Condition="'$(Configuration)'=='Release'">
+		<Exec Command="del $(OutputPath)\bin\*.xml" />
+		<Exec Command="del $(OutputPath)\bin\*.pdb" />
+	</Target>
+
+
+</Project>

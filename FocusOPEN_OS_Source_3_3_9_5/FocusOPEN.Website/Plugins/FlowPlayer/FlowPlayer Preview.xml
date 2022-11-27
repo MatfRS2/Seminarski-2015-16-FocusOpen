@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SchemaVersion="1" Disabled="false">
+  <Name>Flowplayer Preview</Name>
+  <PluginVersion>1.0</PluginVersion>
+  <RegistrationKey>81fb4b97-5b58-441a-89a3-df0708862dc7</RegistrationKey>
+  <RequireAllResourceFiles>false</RequireAllResourceFiles>
+  <ForcePreviewFormat>false</ForcePreviewFormat>
+  <FileExtensions>
+    <FileExtension>flv</FileExtension>
+  </FileExtensions>
+  <Contexts>
+    <Context Name="Default">
+      <UseForType>Standard</UseForType>
+      <Markup src=""><![CDATA[			<a id="[PLAYER-ID]" href="[RELATIVE-PREVIEW-URL]" 	style="display:block;width:340px;height:300px;"></a>
+			<script type="text/javascript">	flowplayer('[PLAYER-ID]', '~/FlowPlayer/flowplayer-3.2.4.swf', { clip: { autoPlay: false, autoBuffering: false } });</script>
+		]]></Markup>
+    </Context>
+  </Contexts>
+</Plugin>

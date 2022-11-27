@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="8" virtualPath="/FocusOPEN.Website.csproj/global.asax" hash="ffffffffef2bc1e8" filehash="3e3f3a51c20f" flags="150000" assembly="FocusOPEN.WebsiteDeployment" type="ASP.global_asax">
+  <filedeps>
+    <filedep name="/FocusOPEN.Website.csproj/global.asax" />
+  </filedeps>
+</preserve>

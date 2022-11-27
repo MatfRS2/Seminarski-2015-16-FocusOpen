@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e1fa901e-8f8b-4376-8e91-deea55d13d5a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8080/FocusOPEN.APS/ProcessingService/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.wsdl" MetadataType="Wsdl" ID="f51eae01-e9f7-47b7-94d2-575ead4e0464" SourceId="1" SourceUrl="http://localhost:8080/FocusOPEN.APS/ProcessingService/?wsdl=wsdl0" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="1ce21bcd-9e09-41dc-beec-a6b527c0f660" SourceId="1" SourceUrl="http://localhost:8080/FocusOPEN.APS/ProcessingService/?xsd=xsd1" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="27147b1c-de0a-47a1-ba84-5ffbdef61e58" SourceId="1" SourceUrl="http://localhost:8080/FocusOPEN.APS/ProcessingService/?xsd=xsd0" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="1c410f2c-520a-4d00-b192-b6c1df9265b7" SourceId="1" SourceUrl="http://localhost:8080/FocusOPEN.APS/ProcessingService/?xsd=xsd3" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="99097e61-7eb6-44fd-8092-e541179a414a" SourceId="1" SourceUrl="http://localhost:8080/FocusOPEN.APS/ProcessingService/?xsd=xsd2" />
+    <MetadataFile FileName="ProcessingService1.wsdl" MetadataType="Wsdl" ID="5df8fd76-77bb-47f1-9455-b42a08bf59fb" SourceId="1" SourceUrl="http://localhost:8080/FocusOPEN.APS/ProcessingService/" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

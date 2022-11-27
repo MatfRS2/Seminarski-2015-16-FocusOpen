@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SchemaVersion="1" Disabled="false">
+  <Name>Flash Preview</Name>
+  <PluginVersion>1.0</PluginVersion>
+  <RegistrationKey>69971c70-6415-46bf-aa76-dbadda5b4f06</RegistrationKey>
+  <RequireAllResourceFiles>false</RequireAllResourceFiles>
+  <ForcePreviewFormat>false</ForcePreviewFormat>
+  <FileExtensions>
+    <FileExtension>swf</FileExtension>
+  </FileExtensions>
+  <Contexts>
+    <Context Name="Default">
+      <UseForType>Standard</UseForType>
+      <Markup src=""><![CDATA[			<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="340" height="300" id="MoviePlayer" align="middle">
+				<param name="allowScriptAccess" value="sameDomain" />
+				<param name="movie" value="~/Images/Players/FlashPlayer.swf" />
+				<param name="quality" value="high" />
+				<param name="flashVars" value="movie_id=[ASSET-ID]&base_url=~/Images/">
+				<embed src="~/Images/Players/FlashPlayer.swf" flashVars="movie_id=[ASSET-ID]&base_url=~/Images/" quality="high" bgcolor="#ffffff" width="340" height="300" name="[PLAYER-ID]" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+			</object>
+		]]></Markup>
+    </Context>
+  </Contexts>
+</Plugin>

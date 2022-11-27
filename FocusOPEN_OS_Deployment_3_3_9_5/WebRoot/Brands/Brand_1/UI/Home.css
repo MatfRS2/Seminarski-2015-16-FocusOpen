@@ -1,0 +1,84 @@
+.HomeFtrPanel
+{
+	background-color: #fff;
+	height: 50px;
+	text-align: left;
+	width: 770px;
+}
+.HomeSrcPanel
+{
+	background-color: #F1F0EE;
+	border-bottom-color: #EAEAEA;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	height: 32px;
+	width: 770px;
+}
+.HomePanel
+{
+	background-color: #FFF;
+	border-bottom-color: #EAEAEA;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	width: 770px;
+}
+.HomeMrgLeft {
+	float:left;
+	width: 415px;
+	background-image: url(images/core/bkgs/HomePanelBkg.gif);
+	background-repeat: no-repeat;
+	margin-top: 10px;
+	margin-left: 0px;
+	text-align: left;
+	padding: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.HomeMrgRight {
+	width: 340px;
+	float: left;
+	margin: 20px 0px 20px 10px;
+	text-align: right;
+	padding: 0px;
+}
+.HomeBkg
+{
+	background-color: #FFF;
+	border-bottom-color: #413189;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	width: 770px;
+}
+.HomeThumbs
+{
+	float: left;
+	overflow: hidden;
+	width: 85px;
+}
+.HomeText
+{
+	width: 400px;
+	float: right;
+	font-size: 11px;
+	margin-top: 0px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	margin-left: 10px;
+}
+p
+{
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 10px;
+}
+ul
+{
+	margin: 0;
+	padding: 0;
+}
+li
+{
+	list-style-position: inside;
+	list-style-type: disc;
+}

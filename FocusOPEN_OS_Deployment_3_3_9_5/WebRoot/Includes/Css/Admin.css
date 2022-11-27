@@ -1,0 +1,30 @@
+﻿div.grippie {
+	background:#EEEEEE url(../../Images/grippie.png) no-repeat scroll center 1px;
+	border-color:#DDDDDD;
+	border-style:solid;
+	border-width:0pt 1px 1px;
+	cursor:s-resize;
+	height:5px;
+	overflow:hidden;
+}
+.resizable-textarea textarea {
+	display:block;
+	margin-bottom:0pt;
+	height: 20%;
+}
+
+/* ------ Metadata administration  -------- */
+
+.detailsContainer
+{
+	 display: none;
+	}
+	
+.expandCollapseDetails
+{
+	 text-decoration: none;
+	 
+	}
+	
+	
+/* ------ Metadata administration END -------- */

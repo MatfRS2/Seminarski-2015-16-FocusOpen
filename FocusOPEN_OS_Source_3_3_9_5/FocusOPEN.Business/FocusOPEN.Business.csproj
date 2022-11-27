@@ -1,0 +1,279 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DD5FC61D-4972-48A4-9BC3-EBBD454A8339}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FocusOPEN.Business</RootNamespace>
+    <AssemblyName>FocusOPEN.Business</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.1.3.42154, Culture=neutral, PublicKeyToken=3a9cab8f8d22bfb7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\Jint\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.1.271, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\SharpZipLib\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Jint, Version=0.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\Jint\Jint.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\Log4net\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.RegularExpressions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APSGateway.cs" />
+    <Compile Include="Exceptions\Entity\AssetTypeFileExtensionException.cs" />
+    <Compile Include="FileInfo\AbstractAssetFileInfo.cs" />
+    <Compile Include="AssetFileZipper.cs" />
+    <Compile Include="Exceptions\AccountExpiredException.cs" />
+    <Compile Include="Exceptions\Base\BaseEntityException.cs" />
+    <Compile Include="Exceptions\Base\BaseException.cs" />
+    <Compile Include="Exceptions\Base\ValidationException.cs" />
+    <Compile Include="Exceptions\Entity\AssetWorkflowUserException.cs" />
+    <Compile Include="Exceptions\CatalogueAssetsException.cs" />
+    <Compile Include="Exceptions\ChangePasswordException.cs" />
+    <Compile Include="Exceptions\Entity\CategoryException.cs" />
+    <Compile Include="Exceptions\Entity\InvalidCompanyException.cs" />
+    <Compile Include="Exceptions\Entity\InvalidIpAddressException.cs" />
+    <Compile Include="Exceptions\Entity\InvalidAssetException.cs" />
+    <Compile Include="Exceptions\Entity\InvalidAssetFilePathException.cs" />
+    <Compile Include="Exceptions\Entity\InvalidAssetTypeException.cs" />
+    <Compile Include="Exceptions\Entity\InvalidLightboxException.cs" />
+    <Compile Include="Exceptions\Entity\InvalidOrderException.cs" />
+    <Compile Include="Exceptions\Entity\InvalidOrderItemException.cs" />
+    <Compile Include="Exceptions\Entity\InvalidUserException.cs" />
+    <Compile Include="Exceptions\Entity\InvalidMetadataException.cs" />
+    <Compile Include="Exceptions\InvalidAssetDelegationException.cs" />
+    <Compile Include="Exceptions\InvalidAssetFileException.cs" />
+    <Compile Include="Exceptions\InvalidHomepageException.cs" />
+    <Compile Include="Exceptions\InvalidUserReactivationException.cs" />
+    <Compile Include="Exceptions\LoginException.cs" />
+    <Compile Include="Exceptions\LoginSecurityException.cs" />
+    <Compile Include="Exceptions\InvalidBrandException.cs" />
+    <Compile Include="Exceptions\PasswordExpiredException.cs" />
+    <Compile Include="Exceptions\RegistrationSecurityException.cs" />
+    <Compile Include="Exceptions\UserPendingEmailConfirmationException.cs" />
+    <Compile Include="FileInfo\AssetBitmapInfo.cs" />
+    <Compile Include="FileInfo\AssetFileInfo.cs" />
+    <Compile Include="FileInfo\AssetPreviewInfo.cs" />
+    <Compile Include="FileInfo\AssetThumbnailInfo.cs" />
+    <Compile Include="FileInfo\ZippedAssetFileInfo.cs" />
+    <Compile Include="FileManagers\AssetBitmapGroupManager.cs" />
+    <Compile Include="FileManagers\AssetImageManager.cs" />
+    <Compile Include="FileManagers\AssetSourcePathManager.cs" />
+    <Compile Include="Managers\Entity\BrandMetadataSettingManager.cs" />
+    <Compile Include="Managers\CacheManager.cs" />
+    <Compile Include="Managers\Entity\AssetTypeFileExtensionManager.cs" />
+    <Compile Include="Managers\Entity\Asset\MultiAssetUploader.cs" />
+    <Compile Include="Managers\Entity\CategoryManager.cs" />
+    <Compile Include="Managers\Entity\Lookups\MetadataManager.cs" />
+    <Compile Include="FileManagers\HomepageImageManager.cs" />
+    <Compile Include="Managers\Entity\Lookups\IpAddressManager.cs" />
+    <Compile Include="Managers\Entity\AuditLogManager.cs" />
+    <Compile Include="Managers\BusinessHelper.cs" />
+    <Compile Include="Managers\Entity\Lookups\CompanyManager.cs" />
+    <Compile Include="Managers\Entity\CartLightbox\BaseCLOManager.cs" />
+    <Compile Include="Managers\Entity\CartLightbox\CartManager.cs" />
+    <Compile Include="Managers\EntitySecurityManager.cs" />
+    <Compile Include="Managers\Entity\AssetFilePathManager.cs" />
+    <Compile Include="Managers\Entity\Asset\AssetCataloguer.cs" />
+    <Compile Include="Managers\Entity\Asset\AssetManager.cs" />
+    <Compile Include="Managers\Entity\CartLightbox\LightboxManager.cs" />
+    <Compile Include="Managers\Entity\Lookups\AssetTypeManager.cs" />
+    <Compile Include="Managers\Entity\Lookups\BrandManager.cs" />
+    <Compile Include="Managers\Plugins\PluginsRegisteredCache.cs" />
+    <Compile Include="Managers\Plugins\PluginHelper.cs" />
+    <Compile Include="Managers\Plugins\PluginManager.cs" />
+    <Compile Include="Managers\Entity\UserManager.cs" />
+    <Compile Include="Managers\Entity\WorkflowManager.cs" />
+    <Compile Include="Managers\EventArgs.cs" />
+    <Compile Include="Managers\LoginManager.cs" />
+    <Compile Include="FileManagers\AssetFileManager.cs" />
+    <Compile Include="Managers\Entity\HomepageManager.cs" />
+    <Compile Include="Managers\Entity\OrderManager.cs" />
+    <Compile Include="Managers\PasswordHistory.cs" />
+    <Compile Include="Managers\Plugins\PluginsUnregisteredCache.cs" />
+    <Compile Include="Managers\SearchManager.cs" />
+    <Compile Include="Managers\Entity\CartLightbox\UserOrderManager.cs" />
+    <Compile Include="Managers\UserSecurityManager.cs" />
+    <Compile Include="Other\BinaryFile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripts\Objects\ScriptRequest.cs" />
+    <Compile Include="Scripts\Objects\ScriptResult.cs" />
+    <Compile Include="Scripts\ScriptEngine.cs" />
+    <Compile Include="Scripts\Objects\ScriptError.cs" />
+    <Compile Include="Scripts\Helpers\ScriptErrorFactory.cs" />
+    <Compile Include="Scripts\Objects\ScriptJSONData.cs" />
+    <Compile Include="Scripts\Objects\ScriptResponse.cs" />
+    <Compile Include="Scripts\Objects\ScriptXmlData.cs" />
+    <Compile Include="Scripts\ScriptEngineTypeResolver.cs" />
+    <Compile Include="Service References\APS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FocusOPEN.Data\FocusOPEN.Data.csproj">
+      <Project>{A62C8747-F3FF-4A38-BB3E-A752A9DA31C4}</Project>
+      <Name>FocusOPEN.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FocusOPEN.Shared\FocusOPEN.Shared.csproj">
+      <Project>{78B3A699-06F2-4E3A-A9B5-CB56E7E249C6}</Project>
+      <Name>FocusOPEN.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\System.Xml.XmlElement.datasource" />
+    <None Include="Service References\APS\item.xsd" />
+    <None Include="Service References\APS\item1.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\APS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\APS\item2.xsd" />
+    <None Include="Service References\APS\item3.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\APS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\APS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\System.Xml.Linq.XElement.datasource" />
+    <None Include="Service References\APS\FocusOPEN.Business.APS.JobResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\APS\FocusOPEN.Business.APS.ServiceStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\APS\item.wsdl" />
+    <None Include="Service References\APS\ProcessingService1.wsdl" />
+    <None Include="Service References\APS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Target Name="AfterBuild">
+    <Exec Command="copy &quot;$(TargetPath)&quot; &quot;$(TargetDir)../../../Dependencies/FocusOPEN/$(TargetFileName)&quot; /Y" />
+  </Target>
+</Project>

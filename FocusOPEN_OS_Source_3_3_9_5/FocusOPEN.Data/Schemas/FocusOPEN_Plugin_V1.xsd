@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--Created with Liquid XML Studio Designer Edition 8.1.7.2743 (http://www.liquid-technologies.com)-->
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Plugin">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Name" type="xs:string" minOccurs="1" maxOccurs="1" />
+                <xs:element name="PluginVersion" type="xs:decimal" minOccurs="1" maxOccurs="1" />
+                <xs:element name="RegistrationKey" type="guid" minOccurs="1" maxOccurs="1" />
+                <xs:element name="RequireAllResourceFiles" type="xs:boolean" minOccurs="0" maxOccurs="1" nillable="true" />
+                <xs:element name="ForcePreviewFormat" type="xs:boolean" minOccurs="0" maxOccurs="1" nillable="true" />
+                <xs:element name="FileExtensions" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="FileExtension" minOccurs="1" maxOccurs="unbounded">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="30" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Contexts" minOccurs="1" maxOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Context" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="UseForType" type="ContextType" minOccurs="1" maxOccurs="unbounded" />
+                                        <xs:element name="Markup" minOccurs="1" maxOccurs="1" nillable="true">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:string">
+                                                        <xs:attribute name="src" type="xs:string" use="optional" />
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="Resources" minOccurs="0" maxOccurs="1">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="Resource" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                   <xs:attribute name="Name" type="xs:string" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="SchemaVersion" type="xs:decimal" use="required" />
+            <xs:attribute name="Disabled" type="xs:boolean" use="optional" />
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="|([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})|(\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\})" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ContextType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Standard" />
+            <xs:enumeration value="Lightbox" />
+            <xs:enumeration value="Cart" />
+            <xs:enumeration value="SearchResults" />
+            <xs:enumeration value="OrderManager" />
+            <xs:enumeration value="ViewAssetList" />
+            <xs:enumeration value="CatalogueAsset" />
+            <xs:enumeration value="AdjustAsset" />
+            <xs:enumeration value="AssetStatistics" />
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

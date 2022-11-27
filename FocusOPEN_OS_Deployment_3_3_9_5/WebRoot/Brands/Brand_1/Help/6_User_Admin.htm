@@ -1,0 +1,293 @@
+<html>
+<head>
+<title>User Admin: FocusOPEN Digital Asset Manager Admin Guide</title>
+<script type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="help.css">
+</head>
+
+
+<body>
+<div><img src="images/helpHdr.gif" width="479" height="68"></div>
+<a name="sub_menu6"></a>
+<div class="Hdr"><H1>User Admin</H1></div>
+<div class="Bck">[<a href="index.htm#admin">main menu</a> | <a href="#" onClick="self.close()">close</a> | <a href="#" onClick="window.print()">print this section</a>]</div>
+<div class="Cnt">
+<ul>
+<li><a href="#user_roles">About User Roles</a></li>
+<li><a href="#manage_users">Manage Users</a></li>
+<li><a href="#home_use">Providing Access From Home (Internal Users Only)</a></li>
+<li><a href="#manage_companies">Providing Access To External Users: Manage Companies</a></li>
+<li><a href="#manage_ip_addresses">Providing Access On Internal Networks: Manage IP Addresses</a></li>
+<li><a href="#manage_workflows">Managing Workflows</a></li>
+</ul>
+</div>
+<div class="HozLine"></div>
+
+<br /><br />
+<a name="user_roles"></a>
+<div class="Hdr"><H2>About User Roles</H2></div>
+<div class="Bck">
+[<a href="#sub_menu6">top ^</a> | <a href="#" onClick="self.close()">close</a>]</div>
+<div class="Cnt">
+<p>Having <a href="1_Getting_Started.htm#registration">registered with the system</a>, users of FocusOPEN Digital Asset Manager may access the system via either an internal or external account:</p>
+<a name="internal_users"></a>
+<H3>Internal User & Administrator Accounts</H3>
+  <p>Employees who have registered internal email addresses, have internal user 
+    accounts. Internal accounts support both user and administrator roles. After 
+    internal user accounts expire, users receive a security prompt to reactivate 
+    their accounts. Only super administrator accounts can be set to never expire. 
+    Administrator roles are:</p>
+  <ul>
+    <li><span class="SubHdr">Upload Users</span><br />
+      Have access to <a href="8_Manage_Assets.htm">Asset Management</a> and <a href="7_Manage_Orders.htm">Order 
+      Management</a> features. Upload Users are responsible for all assets uploaded 
+      to the system by themselves and are required to respond to usage requests 
+      for those assets which have download rights applied. View rights are restricted 
+      to those assets or orders for which they are responsible.<br />
+      <br />
+    </li>
+    <li><span class="SubHdr">Brand Administrators</span><br />
+    </li>
+    Have access to <a href="8_Manage_Assets.htm">Asset Management</a>, <a href="7_Manage_Orders.htm">Order 
+    Management</a> and some <a href="#manage_users">User Management</a> features. 
+    Business User Administrators support Upload Users in their Brand and 
+    can view all users, assets, orders and reports specific to their Business 
+    Unit.<br />
+    <br />
+    <li><span class="SubHdr">Super Administrators</span><br />
+      Have access to <span class="Bold">all</span> administration features, including 
+      <a href="9_Manage_Content.htm">Content Management</a> and <a href="10_Utilities.htm">Utilities</a>. 
+      Super Administrators support Upload and Brand Administrators and 
+      can view all users, assets, orders and reports system-wide.</li>
+  </ul>
+  <a name="home_use"></a>
+  <p><span class="SubHdr">Home Use Permitted</span><br />
+    Checking the 'Home Use Permitted' checkbox (available from the Edit User screen), 
+    allows users to access the Media Library from outside the corporate network 
+    (for example, from home). Note: This option is available to employees 
+    only.</p>
+
+<a name="external_users"></a>
+<H3>External User Accounts</H3>
+<p>Approved third-party companies (for example: agencies) who access the system from outside the corporate network and who have had <a href="#manage_companies">applied to have their domain registered with the system by a Super Administrator</a>, have external user accounts.  External accounts do not support administration roles and automatically expire ten days after activation.</p>
+</div>
+
+<div class="Ftr">this section: <a href="#sub_menu6" title="Click here to view menu options for this section">User Admin</a> | <a href = "index.htm#admin" title="Click here to view all sections in this user guide">main menu</a> | <a href="#" onClick="history.back()">back</a></div>
+
+<div class="HozLine"></div>
+
+<br /><br />
+<a name="manage_users"></a>
+<div class="Hdr"><H2>Manage Users</H2></div>
+<div class="Bck"><span class="Permissions">Available to: Super & Brand Admin</span><br />
+[<a href="#sub_menu6">top ^</a> | <a href="#" onClick="self.close()">close</a>]</div>
+<div class="Cnt">
+<p>The User Management features allows Administrators to find users, edit user accounts and view user statistics.</p>
+  <a name="finding_users"></a> <span class="Bold">To Find A User</span> 
+  <ul>
+    <li>Select User Admin > Manage Users from the main navigation in the Admin 
+      Area. The Manage Users screen will be displayed.</li>
+    <li>The Manage Users screen displays all users by default (regardless of account 
+      status: expired, suspended or active) applicable to administrator role.</li>
+    <li>Brand Administrators: Only view users in their own Brand. 
+      To find a specific user, enter their email into the "User Email" textbox.</li>
+    <li>Super Administrators: View all system users. To find a specific user, 
+      enter their email into the "User Email" textbox. Results can be filtered 
+      by Brand.</li>
+    <li>Press the Search button to filter the results displayed in the table 
+      below. The View Users List table displays the following column headings: 
+      User Name, User Email, User Type, Company, Brand, Expired, Suspended, 
+      Last Login.</li>
+    <li>To view expired and suspended accounts only, check the show expired and 
+      suspended accounts only checkbox beneath the search controls. To sort results 
+      by a column heading, click on the link beneath the column title.</li>
+    <br />
+    <br />
+    <a name="edit_users"></a> <span class="Bold">To Edit User Details</span><br />
+    <br />
+    <li>Having <a href="#finding_users">found a user account</a> to edit, you 
+      can edit the details of individual user accounts by either: clicking on 
+      the link under the user's name or: clicking the 'Edit' link at the far right 
+      of the View User List table. The Edit User screen is displayed.</li>
+    <li>Click on the 'Stats' link at the far right of the View User List table, 
+      to <a href="#">view asset statistics</a></li>
+    <li>On the Edit User screen, revise the information in the fields presented 
+      as required. Note: Fields marked with a * are required.<br />
+      <br />
+
+      <span class="SubHdr">Password</span><br />
+      Leave the password field blank if you do not want to edit the user's password. 
+      Note: You must notify users of any changes made to their password or email 
+      details. <br />
+
+      <span class="SubHdr">Staff User</span><br />
+      If Staff User is chosen, only internal companies will be displayed <br />
+      <br />
+      <span class="SubHdr">Last Logged In</span><br />
+      Shows the date on which the user last logged into the system. If a users 
+      has not logged into the system, &quot;Never&quot; is displayed.<br />
+      <br />
+
+      <span class="SubHdr">Password Expires</span><br />
+      Shows the date on which the user's password will expire. If the password has 
+      expired, the date is displayed in red.<br />
+
+      <span class="SubHdr">Account Expires</span><br />
+      Shows the date on which the user account will expire. If the account has 
+      expired, the date is displayed in red. Only Super Administrators may have accounts which never 
+      expire. <br />
+      <br />
+      <span class="SubHdr">Permissions</span><br />
+      Shows the <a href="#user_roles">user's role</a>: Normal, Upload User, Brand Administrator and Super Administrator.  The Brand Administrator role is not used on FocusOPEN Digital Asset Manager<br />
+      <br />
+
+      <span class="SubHdr">Approver</span><br />
+      Allows the user to delegate who approves any assets where they are involved in workflows.<br />
+      <br />
+
+
+      <span class="SubHdr">Workflow</span><br />
+      If the user is required to have any requests to publish assets checked via an upload workflow, this option should be ticked and a workflow chosen.  The user can be offered the option to choose their own workflow if required.<br />
+      <br />
+
+      <span class="SubHdr">Account Suspended?</span><br />
+      Will prevent users from accessing the system.<br />
+      <br />
+
+      <span class="SubHdr">Account Never Expires</span><br />
+      Allows an account to be set to never expire.<br />
+
+      <span class="SubHdr">Password Never Expires</span><br />
+      Prevents a password expiring so the user does not need to change it.<br />
+
+      <br />
+      <span class="SubHdr">Home Use Permitted</span><br />
+      Users may access the system from an alternative IP address. Note: This option 
+      is available to employees only and is not displayed if IP address restrictions are disabled.<br />
+      <br />
+    </li>
+    <li>Having revised the account details of a user, press the Save button 
+      to save the amends. Note: Press the Cancel button to cancel the editing 
+      process. Any changes will be lost. 
+    <li>You must notify users of any changes made to their accounts.</li>
+  </ul>
+</div>
+
+<div class="Ftr">this section: <a href="#sub_menu6" title="Click here to view menu options for this section">User Admin</a> | <a href = "index.htm#admin" title="Click here to view all sections in this user guide">main menu</a> | <a href="#" onClick="history.back()">back</a></div>
+
+<div class="HozLine"></div>
+
+<br /><br />
+<a name="manage_companies"></a>
+<div class="Hdr"><H2>Manage Companies</H2></div>
+<div class="Bck"><span class="Permissions">Available to: Super & Brand Admin</span><br />
+[<a href="#sub_menu6">top ^</a> | <a href="#" onClick="self.close()">close</a>]</div>
+<div class="Cnt">
+  <p>The Manage Companies feature allows Super Administrators and Business User 
+    Administrators to add and edit the details of approved external users (for 
+    example, third-party suppliers). External users must first apply for access 
+    via the <a href="1_Getting_Started.htm#registration">Registration</a> screen. 
+    Once submitted, their registration request will be emailed to a Super Administrator 
+    for approval.</p>
+  <span class="Bold">To Approve An External User:</span>
+  <ul>
+    <li>Follow the link sent in the email dispatched by the system after a registration 
+      by an external user has been completed. The User Approval screen will be 
+      displayed.</li>
+    <li>Review and respond to the request by either approving access (check 
+      the approve checkbox) or rejecting access (check the reject checkbox). Note: 
+      If you choose the reject the request, add notes in the Your Response 
+      field which detail your decision.</li>
+    <li>External users who are approved will have their domain automatically added 
+      to the Manage Companies list.<br /></li>
+      <br />
+      <span class="Bold">To Edit The Account Of An External User:</span>
+  </ul>
+
+<ul>
+<li>Select User Admin > Manage Companies from the main navigation in the
+Admin Area. The Manage Companies screen will be displayed.</li>
+    <li>In the View Companies List, edit the name, email domain and status (internal 
+      is checked) of a company by clicking the "Edit" link at the far right of 
+      the View Companies List table. All fields will be displayed as editable 
+      text fields. Click the "Update" link to save any amends made. To sort results 
+      by a column heading, click on the link beneath the column title.</li>
+    <li>To add a new company to the View Companies List, enter the company's name 
+      and email domain into the textboxes displayed at the end of the list and 
+      select the status (internal is checked). Press the "Add" button to add the 
+      company to the list. Note: All fields are required.</li>
+    <li>If more than one brand is available on your instance of FocusOPEN, you will be required to choose those brands that users from the new company will have access to.</li>
+</ul>
+</div>
+
+<div class="Ftr">this section: <a href="#sub_menu6" title="Click here to view menu options for this section">User Admin</a> | <a href = "index.htm#admin" title="Click here to view all sections in this user guide">main menu</a> | <a href="#" onClick="history.back()">back</a></div>
+
+<div class="HozLine"></div>
+
+<br /><br />
+<a name="manage_ip_addresses"></a>
+<div class="Hdr"><H2>Manage IP Addresses</H2></div>
+<div class="Bck"><span class="Permissions">Available to: Super Admin Only</span><br />
+[<a href="#sub_menu6">top ^</a> | <a href="#" onClick="self.close()">close</a>]</div>
+<div class="Cnt">
+  <p>The Manage IP Addresses feature allows Super Administrators to add, edit 
+    and delete the IP addresses of internal networks (for example, to allow access 
+    to subsidiaries).  Only internal users are subject to restricted access based on IP address.  IP Address restrictions are switched off by default and must be enabled by an engineer (see the deployment guide if you are a systems administrator).</p>
+
+<ul>
+<li>Select User Admin > Manage IP Addresses from the main navigation in the
+Admin Area. The Manage IP Addresses screen will be displayed.</li>
+    <li>In the View IP Addresses List, edit the IP address of a company by clicking 
+      the "Edit" link at the far right of the View IP Addresses List table. All 
+      fields will be displayed as editable text fields. Click the "Update" link 
+      to save any amends made. To sort results by a column heading, click on the 
+      link beneath the column title.</li>
+
+<li>To add a new IP address to the View IP Addresses List, enter the IP address into the textbox displayed at the end of the list. Press the "Add" button to add the IP address to the list. Note: All fields are required.</li>
+<li>To delete an IP address from the View IP Addresses List, click on the "Delete" link at the far right of the View IP Addresses List table.  Confirm deletion to remove the IP address from the list.</li>
+</ul>
+</div>
+
+<div class="Ftr">this section: <a href="#sub_menu6" title="Click here to view menu options for this section">User Admin</a> | <a href = "index.htm#admin" title="Click here to view all sections in this user guide">main menu</a> | <a href="#" onClick="history.back()">back</a></div>
+
+<div class="HozLine"></div>
+
+<br /><br />
+<a name="manage_workflows"></a>
+<div class="Hdr"><H2>Manage Workflows</H2></div>
+<div class="Bck"><span class="Permissions">Available to: Super Admin Only</span><br />
+[<a href="#sub_menu6">top ^</a> | <a href="#" onClick="self.close()">close</a>]</div>
+<div class="Cnt">
+  <p>The Manage Workflows feature allows Super Administrators to change who is involved in publication (uploading) of assets.  You can add as many workflow as required and assign them to users (or let them choose their own).</p>
+
+<ul>
+<li>Select User Admin > Manage Workflows from the main navigation in the
+Admin Area. The Manage Worfklow screen will be displayed.</li>
+<li>Locate the workflow you wish to amend and click edit.</li>
+<li>The workflow designer will be shown.</li>
+<li>Supply a name for the workflow.</li>
+<li>The list at the top of the screen shows all available users, if you click on a user and then click 'add to workflow' they will be added to those users who approve workflow processes.</li>
+<li>Use move up, move down to change the approval order and remove to take a user out of the list of approvers.</li>
+<li>Click 'save' to store the changes to a workflow.</li>
+</ul>
+
+
+
+</div>
+
+<div class="Ftr">this section: <a href="#sub_menu6" title="Click here to view menu options for this section">User Admin</a> | <a href = "index.htm#admin" title="Click here to view all sections in this user guide">main menu</a> | <a href="#" onClick="history.back()">back</a></div>
+
+<div class="HozLine"></div>
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</body>
+</html>
+

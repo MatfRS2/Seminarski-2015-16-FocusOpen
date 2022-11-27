@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SchemaVersion="1" Disabled="false">
+  <Name>Image Preview</Name>
+  <PluginVersion>1.0</PluginVersion>
+  <RegistrationKey>198818c2-6012-486c-a5bd-e40a67dcfe71</RegistrationKey>
+  <RequireAllResourceFiles>false</RequireAllResourceFiles>
+  <ForcePreviewFormat>false</ForcePreviewFormat>
+  <FileExtensions>
+    <FileExtension>gif</FileExtension>
+    <FileExtension>jpg</FileExtension>
+    <FileExtension>jpeg</FileExtension>
+    <FileExtension>png</FileExtension>
+  </FileExtensions>
+  <Contexts>
+    <Context Name="Default">
+      <UseForType>Standard</UseForType>
+      <Markup src=""><![CDATA[			<img src="[RELATIVE-PREVIEW-URL]" />
+		]]></Markup>
+    </Context>
+  </Contexts>
+</Plugin>

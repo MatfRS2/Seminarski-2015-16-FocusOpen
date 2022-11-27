@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SchemaVersion="1" Disabled="false">
+  <Name>Flowplayer Streaming Preview</Name>
+  <PluginVersion>1.0</PluginVersion>
+  <RegistrationKey>3445ec3c-3c66-4f05-8ddb-193cfd8078cf</RegistrationKey>
+  <RequireAllResourceFiles>false</RequireAllResourceFiles>
+  <ForcePreviewFormat>false</ForcePreviewFormat>
+  <FileExtensions>
+    <FileExtension>flv</FileExtension>
+  </FileExtensions>
+  <Contexts>
+    <Context Name="Default">
+      <UseForType>Standard</UseForType>
+      <Markup src=""><![CDATA[
+		
+			<a id="[PLAYER-ID]" href="[ASSET-REFERENCE].flv" style="display:block;width:340px;height:300px;"></a>
+			<script type="text/javascript">
+				flowplayer('[PLAYER-ID]', '~/FlowPlayer/flowplayer-3.2.4.swf', {
+						clip: {
+							provider: 'rtmp',
+							autoPlay: false,
+							autoBuffering: false
+						},
+						plugins: {
+							rtmp: {
+								url: '~/FlowPlayer/flowplayer.rtmp-3.2.3.swf',
+								netConnectionUrl: '[STREAMING-SERVER-URL]'
+							}
+						}
+					});
+			</script>
+		
+     	]]></Markup>
+    </Context>
+  </Contexts>
+</Plugin>

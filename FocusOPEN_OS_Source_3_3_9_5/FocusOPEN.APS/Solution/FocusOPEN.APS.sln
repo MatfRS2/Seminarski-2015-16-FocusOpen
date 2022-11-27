@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FocusOPEN.APS", "..\FocusOPEN.APS\FocusOPEN.APS.csproj", "{A15299C6-C7C1-4FF0-8E40-449827A923C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FocusOPEN.APS.ConsoleApp", "..\FocusOPEN.APS.ConsoleApp\FocusOPEN.APS.ConsoleApp.csproj", "{14E587A1-5420-4C1F-9A78-DE8C04CB202E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FocusOPEN.APS.WinService", "..\FocusOPEN.APS.WinService\FocusOPEN.APS.WinService.csproj", "{75000C1B-7F3C-4578-A00F-9A60654AC65C}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FocusOPEN.APS.Setup", "..\FocusOPEN.APS.Setup\FocusOPEN.APS.Setup.vdproj", "{4F949093-16DB-4D1E-ABF1-5054FAA705C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A15299C6-C7C1-4FF0-8E40-449827A923C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A15299C6-C7C1-4FF0-8E40-449827A923C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A15299C6-C7C1-4FF0-8E40-449827A923C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A15299C6-C7C1-4FF0-8E40-449827A923C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14E587A1-5420-4C1F-9A78-DE8C04CB202E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14E587A1-5420-4C1F-9A78-DE8C04CB202E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14E587A1-5420-4C1F-9A78-DE8C04CB202E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14E587A1-5420-4C1F-9A78-DE8C04CB202E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75000C1B-7F3C-4578-A00F-9A60654AC65C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75000C1B-7F3C-4578-A00F-9A60654AC65C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75000C1B-7F3C-4578-A00F-9A60654AC65C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75000C1B-7F3C-4578-A00F-9A60654AC65C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F949093-16DB-4D1E-ABF1-5054FAA705C6}.Debug|Any CPU.ActiveCfg = Debug
+		{4F949093-16DB-4D1E-ABF1-5054FAA705C6}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
